@@ -1,8 +1,15 @@
-import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
-
+import {configureStore} from "@reduxjs/toolkit";
+import productReducer from "../features/ProductsList/productListSlice";
+import cartReducer from "../features/cart/cartListSlice";
+import wishReducer from "../features/wishlist/wishListSlice";
+import authReducer from "../features/auth/authSlice";
+import orderReducer from "../features/order/orderSlice";
 export const store = configureStore({
-  reducer: {
-    counter: counterReducer,
-  },
+	reducer: {
+		auth: authReducer,
+		product: productReducer,
+		cart: cartReducer,
+		wishlist: wishReducer,
+		order: orderReducer,
+	},
 });
