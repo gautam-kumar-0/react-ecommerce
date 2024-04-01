@@ -23,20 +23,22 @@ import useAuth from "./hooks/useAuth";
 import OrderStatus from "./pages/OrderStatus";
 import OrderProcess from "./pages/OrderProcess";
 import {fetchOrderByUserAsync} from "./features/order/orderSlice";
-import useOrder from "./hooks/useOrder";
+
+import {fetchUserAsync} from "./features/user/userSlice";
 function App() {
 	const dispatch = useDispatch();
 	useEffect(() => {
 		dispatch(fetchAllProductsAsync());
-	});
-	const user = useAuth();
-	const order = useOrder();
+	}, []);
+	const userId = useAuth();
+
 	useEffect(() => {
-		if (user?.id) {
-			dispatch(fetchCartAsync(user.id));
-			dispatch(fetchOrderByUserAsync(user.id));
+		if (userId) {
+			dispatch(fetchUserAsync(userId));
+			dispatch(fetchCartAsync(userId));
+			dispatch(fetchOrderByUserAsync(userId));
 		}
-	}, [user, dispatch]);
+	}, [userId, dispatch]);
 
 	const error = useSelector((state) => state.product.error);
 

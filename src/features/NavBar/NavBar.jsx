@@ -6,7 +6,8 @@ import {Link, NavLink} from "react-router-dom";
 import {useSelector} from "react-redux";
 import {selectCart} from "../cart/cartListSlice";
 import {selectWish} from "../wishlist/wishListSlice";
-import useAuth from "../../hooks/useAuth";
+import useUser from "../../hooks/useUser";
+
 const StyledItem = ({children, to, className, activeClass}) => {
 	const styles = `text-gray-700  dark:text-gray-200 border-b-2 border-transparent hover:border-violet-500 bg-white/50  dark:border dark:bg-transparent dark:border-gray-900 backdrop-blur-sm dark:hover:bg-violet-700  active:shadow-none transition font-thin font-geo px-3  ${className}`;
 	return (
@@ -30,7 +31,7 @@ const NavBar = () => {
 	const [showMenu, setShowMenu] = useState(true);
 	const cart = Object.keys(useSelector(selectCart)).length;
 	const wishlist = Object.keys(useSelector(selectWish)).length;
-	const user = useAuth();
+	const user = useUser();
 	return (
 		<header className="z-50 flex flex-wrap items-stretch justify-between mb-12 overflow-hidden bg-white lg:mb-0 lg:flex-nowrap md:py-0 lg:justify-start text-lg/loose backdrop-blur-md dark:bg-black ">
 			<div className="flex order-1 my-1 ml-3">
@@ -125,7 +126,7 @@ const NavBar = () => {
 				</StyledItem>
 
 				<div className="flex items-center justify-start flex-grow lg:flex-grow-0 lg:justify-end w-28 h-14">
-					{user.email ? (
+					{user?.email ? (
 						<Link to={"/user"}>
 							<p className="">{user.email}</p>
 						</Link>

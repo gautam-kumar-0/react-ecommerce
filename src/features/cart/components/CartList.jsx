@@ -22,7 +22,13 @@ const CartList = () => {
 							<h1 className="text-6xl">No Items in Cart</h1>
 						)}
 						{Object.keys(cart).map((id) => {
-							return <CartItem1 productId={id} quantity={cart[id]}></CartItem1>;
+							return (
+								<CartItem1
+									productId={id}
+									quantity={cart[id]}
+									key={id}
+								></CartItem1>
+							);
 						})}
 					</div>
 					<div className="p-4 px-6 bg-gray-100">

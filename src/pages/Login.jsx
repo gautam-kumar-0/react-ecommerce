@@ -2,15 +2,15 @@ import logo from "../assests/img/logo.png";
 
 import Button1 from "../components/Button1";
 import {useEffect, useState} from "react";
-import useAuth from "../hooks/useAuth";
+
 import {Link, useLocation, useNavigate} from "react-router-dom";
-import {useDispatch} from "react-redux";
-import {checkUserAsync} from "../features/auth/authSlice";
+import {useDispatch, useSelector} from "react-redux";
+import {checkUserAsync, selectAuth} from "../features/auth/authSlice";
 const Login = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [remember, setRemember] = useState(false);
-	const user = useAuth();
+	const {user: userId, error} = useSelector(selectAuth);
 	const location = useLocation();
 	const dispatch = useDispatch();
 	const onEmailChange = (e) => {
@@ -33,8 +33,8 @@ const Login = () => {
 	}
 	const navigate = useNavigate();
 	useEffect(() => {
-		if (user.email) navigate(location?.state?.from || "/user");
-	}, [user]);
+		if (userId) navigate(location?.state?.from || "/user");
+	}, [userId]);
 	return (
 		<div className="flex px-6 sm:items-center justify-center min-h-[80vh] ring">
 			<form
@@ -123,9 +123,9 @@ const Login = () => {
 					</div>
 				</div>
 				<div className="px-2 text-center text-gray-500 dark:text-gray-400">
-					<p className={`${user?.error ? "text-red-400" : "text-gray-700"}`}>
-						{user?.error
-							? user.error.message
+					<p className={`${error ? "text-red-400" : "text-gray-700"}`}>
+						{error
+							? error.message
 							: "Enter your email address and password to login."}
 					</p>
 				</div>

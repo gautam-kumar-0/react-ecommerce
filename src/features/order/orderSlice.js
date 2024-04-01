@@ -56,7 +56,7 @@ const orderSlice = createSlice({
 	extraReducers: (builder) => {
 		builder
 			.addCase(fetchOrderByUserAsync.fulfilled, (state, action) => {
-				state.orders = action.payload;
+				state.orders = action.payload.sort((a, b) => b.createdAt - a.createdAt);
 			})
 			.addCase(fetchOrderByIdAsync.fulfilled, (state, action) => {
 				state.orderById = action.payload;

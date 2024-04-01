@@ -5,7 +5,11 @@ import {getProductById} from "../../ProductsList/productListSlice";
 const OrderItem = ({productId}) => {
 	const product = useSelector((state) => getProductById(state, productId));
 	return (
-		<img className="w-12 h-12" src={product.thumbnail} alt={product.title} />
+		<img
+			className="object-cover rounded w-14 h-14"
+			src={product.thumbnail}
+			alt={product.title}
+		/>
 	);
 };
 

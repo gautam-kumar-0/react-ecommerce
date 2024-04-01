@@ -9,11 +9,11 @@ import {addToCartAsync as add, selectCart} from "../../cart/cartListSlice";
 import {TiShoppingCart} from "react-icons/ti";
 import {addW, removeW, selectWishById} from "../../wishlist/wishListSlice";
 import {useLocation, useNavigate} from "react-router-dom";
-import useAuth from "../../../hooks/useAuth";
+import useUser from "../../../hooks/useUser";
 
 const ProductCard = ({product}) => {
 	const wishlist = useSelector((state) => selectWishById(state, product.id));
-	const user = useAuth();
+	const user = useUser();
 	const dispatch = useDispatch();
 	const cart = useSelector(selectCart);
 	const location = useLocation();

@@ -13,10 +13,10 @@ const OrderStatus = () => {
 	const order = useSelector((state) => state.order.orderById);
 	useEffect(() => {
 		dispatch(fetchOrderByIdAsync(orderId));
-	});
+	}, []);
 	if (!order?.id) return <BarLoader />;
 	return (
-		<div>
+		<div className="p-5">
 			<h2>Order No. {orderId}</h2>
 			<p>{order.status}</p>
 			<p>{dayjs(order.createdAt).format("HH:mm DD/MM/YY")}</p>

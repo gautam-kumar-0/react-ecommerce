@@ -15,10 +15,10 @@ import {useNavigate} from "react-router-dom";
 const CartItem1 = ({productId, quantity}) => {
 	const product = useSelector((state) => getProductById(state, productId));
 	const dispatch = useDispatch();
-	const user = useAuth();
+	const userId = useAuth();
 	const navigate = useNavigate();
-	const item = {product: product?.id, user: user?.id};
-	if (!product || !user?.id) {
+	const item = {product: product?.id, user: userId};
+	if (!product || !userId) {
 		return <HashLoader className="text-4xl" />;
 	}
 
@@ -50,7 +50,7 @@ const CartItem1 = ({productId, quantity}) => {
 						<div className="flex items-center gap-2 ">
 							<button
 								onClick={() => {
-									if (!user?.id) navigate("/login");
+									if (!userId) navigate("/login");
 									dispatch(add(item));
 								}}
 								className="text-xl text-gray-400 border rounded-sm dark:border-white/10 hover:text-emerald-400"

@@ -1,16 +1,17 @@
 import React from "react";
-import useAuth from "../hooks/useAuth";
-import {LuUser} from "react-icons/lu";
+
 import {TiUser} from "react-icons/ti";
 import {Link} from "react-router-dom";
+import useUser from "../hooks/useUser";
+import {BarLoader} from "react-spinners";
 
 const User = () => {
-	let user = useAuth();
-
+	let user = useUser();
+	if (!user) return <BarLoader />;
 	return (
 		<div className="p-4 ">
 			<div className="flex items-center gap-4 p-2">
-				{user.profile ? (
+				{user?.profile ? (
 					<img src={user.profile}></img>
 				) : (
 					<TiUser className="text-6xl text-gray-500 rounded-full ring ring-gray-400" />

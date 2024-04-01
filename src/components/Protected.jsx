@@ -1,11 +1,11 @@
 import React from "react";
-import useAuth from "../hooks/useAuth";
 import {Navigate, useLocation} from "react-router-dom";
+import useAuth from "../hooks/useAuth";
 
 const Protected = ({children}) => {
 	const location = useLocation();
-	const user = useAuth();
-	return user.email ? (
+	const userId = useAuth();
+	return userId ? (
 		children
 	) : (
 		<Navigate to={"/login"} state={{from: location}} />

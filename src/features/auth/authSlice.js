@@ -14,13 +14,10 @@ export const checkUserAsync = createAsyncThunk("auth/login", async (user) => {
 	const response = await checkUser(user);
 	return response.data;
 });
-export const updateUserAsync = createAsyncThunk("auth/update", async (args) => {
-	const response = await updateUser(args);
-	return response.data;
-});
 
 const initialState = {
-	user: {},
+	user: null,
+	error: null,
 };
 
 const authSlice = createSlice({
@@ -29,21 +26,19 @@ const authSlice = createSlice({
 	reducers: {},
 	extraReducers: (builder) => {
 		builder.addCase(createUserAsync.fulfilled, (state, action) => {
-			state.user = action.payload;
+			state.user = action.payload.id;
 		});
 		builder.addCase(checkUserAsync.fulfilled, (state, action) => {
 			state.user = action.payload;
-			state.user.error = null;
+			state.error = null;
 		});
 		builder.addCase(checkUserAsync.rejected, (state, action) => {
-			state.user.error = action.error;
-		});
-		builder.addCase(updateUserAsync.fulfilled, (state, action) => {
-			state.user = action.payload;
+			state.error = action.error;
 		});
 	},
 });
 
-export const selectUser = (state) => state.auth.user;
+export const selectUserId = (state) => state.auth.user;
+export const selectAuth = (state) => state.auth;
 
 export default authSlice.reducer;

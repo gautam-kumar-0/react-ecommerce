@@ -1,12 +1,12 @@
 import React from "react";
 import {LuBuilding2, LuHome, LuX} from "react-icons/lu";
-import useAuth from "../../../hooks/useAuth";
 import {TbRoad} from "react-icons/tb";
 import {useDispatch} from "react-redux";
-import {updateUserAsync} from "../../auth/authSlice";
+import {updateUserAsync} from "../../user/userSlice";
+import useUser from "../../../hooks/useUser";
 
 const AddressForm = ({show, setShow}) => {
-	const user = useAuth();
+	const user = useUser();
 	const toggleShow = () => setShow(!show);
 	const dispatch = useDispatch();
 

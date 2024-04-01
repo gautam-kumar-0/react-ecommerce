@@ -1,8 +1,8 @@
 import {useSelector} from "react-redux";
-import {selectUser} from "../features/auth/authSlice";
+import {selectUserId} from "../features/auth/authSlice";
 
 const useAuth = () => {
-	return useSelector(selectUser);
+	return useSelector(selectUserId);
 };
 
 export default useAuth;

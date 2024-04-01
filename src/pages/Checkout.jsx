@@ -2,18 +2,18 @@ import React, {useEffect, useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
 import useCart from "../hooks/useCart";
 import {LuBuilding2, LuHome} from "react-icons/lu";
-import useAuth from "../hooks/useAuth";
 import OrderInfo from "../features/order/components/OrderInfo";
 import AddressForm from "../features/user/components/AddressForm";
 import {useDispatch, useSelector} from "react-redux";
 import {createOrderAsync, selectOrderState} from "../features/order/orderSlice";
+import useUser from "../hooks/useUser";
 
 const Checkout = () => {
 	const {products, cart, total, items} = useCart();
 	const [showAddForm, setShowAddForm] = useState(false);
 	const [shippingAddress, setShippingAddress] = useState(0);
 	const [showError, setShowError] = useState(false);
-	let user = useAuth();
+	let user = useUser();
 	const dispatch = useDispatch();
 	const order = useSelector(selectOrderState);
 	const createOrder = (e) => {
@@ -30,7 +30,7 @@ const Checkout = () => {
 	const navigate = useNavigate();
 	useEffect(() => {
 		if (order.currentOrder) {
-			navigate("/order/processing");
+			navigate("/order/processing", {replace: true});
 		} else if (order.error) {
 			setShowError(true);
 		}
@@ -59,8 +59,8 @@ const Checkout = () => {
 										strokeWidth="2"
 									>
 										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
+											strokeLinecap="round"
+											strokeLinejoin="round"
 											d="M5 13l4 4L19 7"
 										/>
 									</svg>
@@ -76,8 +76,8 @@ const Checkout = () => {
 								strokeWidth="2"
 							>
 								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
+									strokeLinecap="round"
+									strokeLinejoin="round"
 									d="M9 5l7 7-7 7"
 								/>
 							</svg>
@@ -99,8 +99,8 @@ const Checkout = () => {
 								strokeWidth="2"
 							>
 								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
+									strokeLinecap="round"
+									strokeLinejoin="round"
 									d="M9 5l7 7-7 7"
 								/>
 							</svg>
@@ -127,9 +127,12 @@ const Checkout = () => {
 						Check your items. And select a suitable shipping method.
 					</p>
 					<div className="px-2 py-4 mt-8 space-y-3 overflow-y-scroll bg-white border rounded-lg sm:px-6 max-h-60 scroll">
-						{products.map((p) => {
+						{products.map((p, i) => {
 							return (
-								<div className="flex flex-col bg-white rounded-lg sm:flex-row">
+								<div
+									className="flex flex-col bg-white rounded-lg sm:flex-row"
+									key={i}
+								>
 									<img
 										className="object-cover object-center h-24 m-2 border rounded-md w-28"
 										src={p.thumbnail}

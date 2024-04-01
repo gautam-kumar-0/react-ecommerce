@@ -5,6 +5,7 @@ import Button1 from "../components/Button1";
 import {useEffect, useState} from "react";
 import {createUserAsync, selectUser} from "../features/auth/authSlice";
 import {useNavigate} from "react-router-dom";
+import useUser from "../hooks/useUser";
 const Signup = () => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
@@ -13,7 +14,7 @@ const Signup = () => {
 	const [remember, setRemember] = useState(false);
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
-	const user = useSelector(selectUser);
+	const user = useUser();
 	const onNameChange = (e) => {
 		setName(e.target.value);
 	};
