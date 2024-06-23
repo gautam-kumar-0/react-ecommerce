@@ -559,7 +559,18 @@
       "name": "Gautam Kumar",
       "email": "g@gmail.com",
       "password": "1234567",
-      "addresses": []
+      "addresses": [
+        {
+          "name": "Gautam Kumar",
+          "type": "Home",
+          "street": "sdfad",
+          "landmark": "asdfa",
+          "city": "adfasd",
+          "district": "asdf",
+          "state": "State",
+          "pin": "asdf"
+        }
+      ]
     },
     {
       "id": "1a3a",
@@ -569,6 +580,7 @@
       "addresses": [
         {
           "name": "Gautam Kumar",
+          "email": "g@g",
           "type": "Home",
           "street": "Professor colony Naugachia",
           "landmark": "nearby",
@@ -579,6 +591,7 @@
         },
         {
           "name": "GAutam Kumar",
+          "email": "g@g",
           "type": "Work",
           "street": "Bhagalpur",
           "landmark": "Ahls s",
@@ -588,24 +601,60 @@
           "pin": "Asdosdf"
         }
       ]
+    },
+    {
+      "id": "d63c",
+      "name": "Gautam Kumar",
+      "email": "gk12@gmail.com",
+      "password": "qwertyui"
     }
   ],
   "cart": [
     {
-      "id": "29c9",
+      "id": "f433",
       "product": "2",
-      "user": "9923",
+      "user": "d63c",
       "quantity": 1
     },
     {
-      "id": "2d7f",
+      "id": "c370",
       "product": "3",
+      "user": "d63c",
+      "quantity": 1
+    },
+    {
+      "id": "ce7d",
+      "product": "6",
+      "user": "d63c",
+      "quantity": 1
+    },
+    {
+      "id": "8a79",
+      "product": "7",
+      "user": "d63c",
+      "quantity": 1
+    },
+    {
+      "id": "a35a",
+      "product": "7",
+      "user": "9923",
+      "quantity": 2
+    },
+    {
+      "id": "2844",
+      "product": "5",
       "user": "9923",
       "quantity": 1
     },
     {
-      "id": "8863",
+      "id": "3fdf",
       "product": "4",
+      "user": "9923",
+      "quantity": 1
+    },
+    {
+      "id": "4718",
+      "product": "3",
       "user": "9923",
       "quantity": 1
     }
@@ -688,6 +737,196 @@
       },
       "status": "pending",
       "createdAt": 1711959208568
+    },
+    {
+      "id": "b624",
+      "cart": {
+        "4": 1,
+        "5": 1
+      },
+      "userId": "1a3a",
+      "shippingAddress": {
+        "name": "GAutam Kumar",
+        "type": "Work",
+        "street": "Bhagalpur",
+        "landmark": "Ahls s",
+        "city": "Dlsde",
+        "district": "Dsjosd",
+        "state": "State",
+        "pin": "Asdosdf"
+      },
+      "status": "pending",
+      "createdAt": 1712554428979
+    },
+    {
+      "id": "40f5",
+      "cart": {
+        "2": 1,
+        "3": 1,
+        "4": 1
+      },
+      "userId": "9923",
+      "status": "pending",
+      "createdAt": 1719045078672
+    },
+    {
+      "id": "4fb7",
+      "cart": {
+        "3": 1,
+        "4": 1
+      },
+      "userId": "9923",
+      "shippingAddress": {
+        "name": "Gautam Kumar",
+        "type": "Home",
+        "street": "sdfad",
+        "landmark": "asdfa",
+        "city": "adfasd",
+        "district": "asdf",
+        "state": "State",
+        "pin": "asdf"
+      },
+      "status": "pending",
+      "createdAt": 1719052644444
+    },
+    {
+      "id": "7342",
+      "cart": {
+        "1": 1,
+        "2": 1
+      },
+      "userId": "9923",
+      "shippingAddress": {
+        "name": "Gautam Kumar",
+        "type": "Home",
+        "street": "sdfad",
+        "landmark": "asdfa",
+        "city": "adfasd",
+        "district": "asdf",
+        "state": "State",
+        "pin": "asdf"
+      },
+      "status": "pending",
+      "createdAt": 1719053137979
+    },
+    {
+      "id": "7105",
+      "cart": {
+        "2": 1
+      },
+      "userId": "9923",
+      "shippingAddress": {
+        "name": "Gautam Kumar",
+        "type": "Home",
+        "street": "sdfad",
+        "landmark": "asdfa",
+        "city": "adfasd",
+        "district": "asdf",
+        "state": "State",
+        "pin": "asdf"
+      },
+      "status": "pending",
+      "createdAt": 1719061487075
+    },
+    {
+      "id": "a0d4",
+      "cart": {
+        "1": 1,
+        "2": 1,
+        "5": 1,
+        "6": 1
+      },
+      "userId": "9923",
+      "shippingAddress": {
+        "name": "Gautam Kumar",
+        "type": "Home",
+        "street": "sdfad",
+        "landmark": "asdfa",
+        "city": "adfasd",
+        "district": "asdf",
+        "state": "State",
+        "pin": "asdf"
+      },
+      "status": "pending",
+      "createdAt": 1719062761836
+    },
+    {
+      "id": "ba6e",
+      "cart": {
+        "2": 1
+      },
+      "userId": "9923",
+      "shippingAddress": {
+        "name": "Gautam Kumar",
+        "type": "Home",
+        "street": "sdfad",
+        "landmark": "asdfa",
+        "city": "adfasd",
+        "district": "asdf",
+        "state": "State",
+        "pin": "asdf"
+      },
+      "status": "pending",
+      "createdAt": 1719063960138
+    },
+    {
+      "id": "b04c",
+      "cart": {
+        "1": 1,
+        "2": 1
+      },
+      "userId": "9923",
+      "shippingAddress": {
+        "name": "Gautam Kumar",
+        "type": "Home",
+        "street": "sdfad",
+        "landmark": "asdfa",
+        "city": "adfasd",
+        "district": "asdf",
+        "state": "State",
+        "pin": "asdf"
+      },
+      "status": "pending",
+      "createdAt": 1719064223993
+    },
+    {
+      "id": "4548",
+      "cart": {
+        "2": 1,
+        "4": 1
+      },
+      "userId": "9923",
+      "shippingAddress": {
+        "name": "Gautam Kumar",
+        "type": "Home",
+        "street": "sdfad",
+        "landmark": "asdfa",
+        "city": "adfasd",
+        "district": "asdf",
+        "state": "State",
+        "pin": "asdf"
+      },
+      "status": "pending",
+      "createdAt": 1719100441432
+    },
+    {
+      "id": "7e3c",
+      "cart": {
+        "2": 1
+      },
+      "userId": "9923",
+      "shippingAddress": {
+        "name": "Gautam Kumar",
+        "type": "Home",
+        "street": "sdfad",
+        "landmark": "asdfa",
+        "city": "adfasd",
+        "district": "asdf",
+        "state": "State",
+        "pin": "asdf"
+      },
+      "status": "pending",
+      "createdAt": 1719101330102
     }
   ]
 }

@@ -77,7 +77,7 @@ const orderSlice = createSlice({
 export const selectCurrentOrder = (state) => state.order.currentOrder;
 export const selectOrders = (state) => state.order.orders;
 export const selectOrderState = (state) => state.order;
-
+export const selectOrderById = (state) => state.order.orderById;
 export const getOrderById = createSelector(
 	selectOrders,
 	(state, orderId) => orderId,

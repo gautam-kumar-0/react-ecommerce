@@ -10,10 +10,11 @@ import ProductCard3 from "../features/ProductsList/components/ProductCard3";
 import Button1 from "../components/Button1";
 import {useSelector} from "react-redux";
 import {ClipLoader} from "react-spinners";
+import useCart from "../hooks/useCart";
 
 const Home = () => {
 	const products = useSelector(selectAllProducts);
-
+	const {products: cartProducts} = useCart();
 	if (products.length === 0) {
 		return (
 			<div className="flex mt-12 font-bold place-content-center text-8xl">
@@ -49,9 +50,13 @@ const Home = () => {
 					<aside className="p-3 bg-white lg:basis-1/2">
 						<h3 className="p-2 text-2xl">Items in Cart</h3>
 						<div className="flex flex-col overflow-y-scroll border-2 border-violet-300 h-60 custom-scrollbar">
-							<ProductCard3 product={products[0]} />
-							<ProductCard3 product={products[1]} />
-							<ProductCard3 product={products[1]} />
+							{cartProducts ? (
+								cartProducts.map((product) => (
+									<ProductCard3 product={product} />
+								))
+							) : (
+								<p>No Items in Cart</p>
+							)}
 						</div>
 						<Button1 className="m-2 mx-auto rounded-full">Open Cart</Button1>
 					</aside>

@@ -49,7 +49,10 @@ const ProductCard = ({product}) => {
 							<span className="mr-1 font-light font-jose bg-none text-emerald-400">
 								$
 							</span>
-							{product.price}
+							{(
+								product.price -
+								(product.price * product.discountPercentage) / 100
+							).toFixed(2)}
 						</span>
 					</h2>
 				</div>
@@ -58,7 +61,12 @@ const ProductCard = ({product}) => {
 					<Heart liked={wishlist} onClick={toggleWish} />
 				</div>
 				<div className="flex flex-row items-stretch justify-between gap-3 mt-3 bg-gradient-lr from-violet-300/30 to-indigo-300/30 dark:bg-none">
-					<Button1 className={"rounded-r-full pr-8"}>Buy Now</Button1>
+					<Button1
+						onClick={() => navigate(`/product/${product.id}`)}
+						className={"rounded-r-full pr-8"}
+					>
+						View
+					</Button1>
 					<Button2
 						onClick={() => {
 							if (user.id) {

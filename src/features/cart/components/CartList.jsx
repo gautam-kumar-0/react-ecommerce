@@ -7,11 +7,12 @@ import CartEmpty from "./CartEmpty";
 
 import {Link} from "react-router-dom";
 import OrderInfo from "../../order/components/OrderInfo";
+import useCart from "../../../hooks/useCart";
 
 const CartList = () => {
 	const cart = useSelector(selectCart);
 	const numberOfItems = Object.keys(cart).length;
-
+	const {products, total, items} = useCart();
 	return (
 		<section className="">
 			<h2 className="px-6 text-3xl">Cart [ {numberOfItems}]</h2>
@@ -32,7 +33,7 @@ const CartList = () => {
 						})}
 					</div>
 					<div className="p-4 px-6 bg-gray-100">
-						<OrderInfo />
+						<OrderInfo products={products} cart={cart} />
 						<Link to={"/checkout"}>
 							<button className="w-full px-6 py-3 mb-4 font-medium text-white bg-gray-900 rounded-md">
 								Order Now

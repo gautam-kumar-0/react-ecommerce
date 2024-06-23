@@ -25,6 +25,7 @@ import OrderProcess from "./pages/OrderProcess";
 import {fetchOrderByUserAsync} from "./features/order/orderSlice";
 
 import {fetchUserAsync} from "./features/user/userSlice";
+import AddressPage from "./features/user/components/AddressPage";
 function App() {
 	const dispatch = useDispatch();
 	useEffect(() => {
@@ -66,6 +67,14 @@ function App() {
 			element: (
 				<Protected>
 					<User />
+				</Protected>
+			),
+		},
+		{
+			path: "/user/addresses",
+			element: (
+				<Protected>
+					<AddressPage />
 				</Protected>
 			),
 		},

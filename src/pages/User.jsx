@@ -28,8 +28,12 @@ const User = () => {
 				<div className="p-4 text-2xl border">
 					<Link to={"/order/history"}>Orders</Link>
 				</div>
-				<div className="p-4 text-2xl border">Address</div>
-				<div className="p-4 text-2xl border">Personal </div>
+				<div className="p-4 text-2xl border">
+					<Link to={"/user/addresses"}>Addresses</Link>
+				</div>
+				<div className="p-4 text-2xl border">
+					<Link to={"/user/personal"}>Personal</Link>
+				</div>
 			</div>
 		</div>
 	);

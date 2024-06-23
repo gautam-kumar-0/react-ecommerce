@@ -2,10 +2,10 @@ import React from "react";
 import {LuBuilding2, LuHome, LuX} from "react-icons/lu";
 import {TbRoad} from "react-icons/tb";
 import {useDispatch} from "react-redux";
-import {updateUserAsync} from "../../user/userSlice";
+import {updateUserAsync} from "../userSlice";
 import useUser from "../../../hooks/useUser";
 
-const AddressForm = ({show, setShow}) => {
+const NewAddressForm = ({show, setShow}) => {
 	const user = useUser();
 	const toggleShow = () => setShow(!show);
 	const dispatch = useDispatch();
@@ -203,4 +203,4 @@ const AddressForm = ({show, setShow}) => {
 	);
 };
 
-export default AddressForm;
+export default NewAddressForm;

@@ -6,7 +6,7 @@ const OrderItem = ({productId}) => {
 	const product = useSelector((state) => getProductById(state, productId));
 	return (
 		<img
-			className="object-cover rounded w-14 h-14"
+			className="object-cover w-32 h-32 rounded"
 			src={product.thumbnail}
 			alt={product.title}
 		/>

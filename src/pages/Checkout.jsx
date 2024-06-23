@@ -3,7 +3,7 @@ import {Link, useNavigate} from "react-router-dom";
 import useCart from "../hooks/useCart";
 import {LuBuilding2, LuHome} from "react-icons/lu";
 import OrderInfo from "../features/order/components/OrderInfo";
-import AddressForm from "../features/user/components/AddressForm";
+import NewAddressForm from "../features/user/components/NewAddressForm";
 import {useDispatch, useSelector} from "react-redux";
 import {createOrderAsync, selectOrderState} from "../features/order/orderSlice";
 import useUser from "../hooks/useUser";
@@ -158,50 +158,55 @@ const Checkout = () => {
 						</span>
 					</div>
 					<div className="grid gap-6 mt-5">
-						{user?.addresses.map((a, i) => {
-							return (
-								<div className="relative">
-									<input
-										className="hidden peer"
-										id={`address_${i}`}
-										type="radio"
-										name="address"
-										checked={shippingAddress === i}
-										required
-										onChange={() => setShippingAddress(i)}
-									/>
-									<span className="box-content absolute block w-3 h-3 -translate-y-1/2 bg-white border-8 border-gray-300 rounded-full peer-checked:border-gray-700 right-4 top-1/2"></span>
-									<label
-										className="flex p-4 border border-gray-300 rounded-lg cursor-pointer select-none peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 peer-focused:ring"
-										htmlFor={`address_${i}`}
-									>
-										<span className="text-lg font-medium">
-											{a.type === "Work" ? <LuBuilding2 /> : <LuHome />}
-										</span>
-										<div className="ml-5 font-light text-gray-500 font-geo ">
-											<span className="mt-2 font-semibold text-gray-900">
-												{a.name}
+						{user?.addresses &&
+							user.addresses.map((a, i) => {
+								return (
+									<div className="relative">
+										<input
+											className="hidden peer"
+											id={`address_${i}`}
+											type="radio"
+											name="address"
+											checked={shippingAddress === i}
+											required
+											onChange={() => setShippingAddress(i)}
+										/>
+										<span className="box-content absolute block w-3 h-3 -translate-y-1/2 bg-white border-8 border-gray-300 rounded-full peer-checked:border-gray-700 right-4 top-1/2"></span>
+										<label
+											className="flex p-4 border border-gray-300 rounded-lg cursor-pointer select-none peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 peer-focused:ring"
+											htmlFor={`address_${i}`}
+										>
+											<span className="text-lg font-medium">
+												{a.type === "Work" ? <LuBuilding2 /> : <LuHome />}
 											</span>
-											<span className="m-1">{a.landmark},</span>
-											<span className="m-1">{a.street},</span>
-											<span className="m-1">{a.city},</span>
-											<span className="m-1">{a.district},</span>
-											<span className="m-1">{a.state},</span>
-											<span className="m-1">{a.pin}.</span>
-											<p className="text-sm leading-6 text-slate-500">
-												{a.estimates}
-											</p>
-										</div>
-									</label>
-								</div>
-							);
-						})}
+											<div className="ml-5 font-light text-gray-500 font-geo ">
+												<span className="mt-2 font-semibold text-gray-900">
+													{a.name}
+												</span>
+												<span className="m-1">{a.landmark},</span>
+												<span className="m-1">{a.street},</span>
+												<span className="m-1">{a.city},</span>
+												<span className="m-1">{a.district},</span>
+												<span className="m-1">{a.state},</span>
+												<span className="m-1">{a.pin}.</span>
+												<p className="text-sm leading-6 text-slate-500">
+													{a.estimates}
+												</p>
+											</div>
+										</label>
+									</div>
+								);
+							})}
 					</div>
 				</div>
 				<div className="px-4 mt-10 bg-gray-50 lg:mt-0">
 					<div className="">
 						{/*Total*/}
-						<OrderInfo />
+						<OrderInfo
+							products={products}
+							cart={cart}
+							
+						/>
 
 						<button
 							className="w-full px-6 py-3 mb-4 font-medium text-white bg-gray-900 rounded-md "
@@ -214,7 +219,7 @@ const Checkout = () => {
 				</div>
 			</form>
 			{showAddForm && (
-				<AddressForm show={showAddForm} setShow={setShowAddForm} />
+				<NewAddressForm show={showAddForm} setShow={setShowAddForm} />
 			)}
 		</div>
 	);

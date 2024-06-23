@@ -1,0 +1,73 @@
+"filename", "language", "CSS", "JavaScript", "JavaScript JSX", "JSON", "Markdown", "HTML", "comment", "blank", "total"
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\README.md", "Markdown", 0, 0, 0, 0, 26, 0, 0, 21, 47
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\data\data.json", "JSON", 0, 0, 0, 713, 0, 0, 0, 1, 714
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\package-lock.json", "JSON", 0, 0, 0, 17253, 0, 0, 0, 1, 17254
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\package.json", "JSON", 0, 0, 0, 47, 0, 0, 0, 1, 48
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\public\index.html", "HTML", 0, 0, 0, 0, 0, 21, 23, 1, 45
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\public\manifest.json", "JSON", 0, 0, 0, 25, 0, 0, 0, 1, 26
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\App.css", "CSS", 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\App.js", "JavaScript", 0, 127, 0, 0, 0, 0, 0, 11, 138
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\app\store.js", "JavaScript", 0, 17, 0, 0, 0, 0, 0, 1, 18
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\components\Button1.jsx", "JavaScript JSX", 0, 0, 12, 0, 0, 0, 0, 3, 15
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\components\Button2.jsx", "JavaScript JSX", 0, 0, 12, 0, 0, 0, 0, 3, 15
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\components\ButtonPrimary.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\components\Carousel.jsx", "JavaScript JSX", 0, 0, 95, 0, 0, 0, 0, 11, 106
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\components\Filters.jsx", "JavaScript JSX", 0, 0, 151, 0, 0, 0, 19, 5, 175
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\components\Heart.jsx", "JavaScript JSX", 0, 0, 22, 0, 0, 0, 0, 2, 24
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\components\Image.jsx", "JavaScript JSX", 0, 0, 27, 0, 0, 0, 0, 3, 30
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\components\ProductImage.jsx", "JavaScript JSX", 0, 0, 56, 0, 0, 0, 6, 5, 67
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\components\ProductImages.jsx", "JavaScript JSX", 0, 0, 79, 0, 0, 0, 7, 14, 100
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\components\Protected.jsx", "JavaScript JSX", 0, 0, 13, 0, 0, 0, 0, 3, 16
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\components\Rating.jsx", "JavaScript JSX", 0, 0, 41, 0, 0, 0, 0, 4, 45
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\NavBar\NavBar.jsx", "JavaScript JSX", 0, 0, 139, 0, 0, 0, 1, 8, 148
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\ProductsList\components\ProductCard.jsx", "JavaScript JSX", 0, 0, 84, 0, 0, 0, 0, 3, 87
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\ProductsList\components\ProductCard2.jsx", "JavaScript JSX", 0, 0, 36, 0, 0, 0, 0, 6, 42
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\ProductsList\components\ProductCard3.jsx", "JavaScript JSX", 0, 0, 24, 0, 0, 0, 0, 3, 27
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\ProductsList\components\ProductItem.jsx", "JavaScript JSX", 0, 0, 87, 0, 0, 0, 0, 10, 97
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\ProductsList\components\ProductList.jsx", "JavaScript JSX", 0, 0, 20, 0, 0, 0, 0, 3, 23
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\ProductsList\productListApi.js", "JavaScript", 0, 26, 0, 0, 0, 0, 0, 4, 30
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\ProductsList\productListSlice.js", "JavaScript", 0, 79, 0, 0, 0, 0, 2, 10, 91
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\auth\authApi.js", "JavaScript", 0, 28, 0, 0, 0, 0, 0, 2, 30
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\auth\authSlice.js", "JavaScript", 0, 39, 0, 0, 0, 0, 0, 6, 45
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\auth\components\Login.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\auth\components\Signup.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\cart\cartListApi.js", "JavaScript", 0, 91, 0, 0, 0, 0, 0, 7, 98
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\cart\cartListSlice.js", "JavaScript", 0, 75, 0, 0, 0, 0, 0, 7, 82
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\cart\components\CartEmpty.jsx", "JavaScript JSX", 0, 0, 12, 0, 0, 0, 0, 3, 15
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\cart\components\CartItem1.jsx", "JavaScript JSX", 0, 0, 82, 0, 0, 0, 0, 6, 88
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\cart\components\CartList.jsx", "JavaScript JSX", 0, 0, 44, 0, 0, 0, 0, 7, 51
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\order\components\OrderInfo.jsx", "JavaScript JSX", 0, 0, 45, 0, 0, 0, 0, 5, 50
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\order\components\OrderItem.jsx", "JavaScript JSX", 0, 0, 14, 0, 0, 0, 0, 3, 17
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\order\components\OrderList.jsx", "JavaScript JSX", 0, 0, 23, 0, 0, 0, 0, 3, 26
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\order\orderApi.js", "JavaScript", 0, 42, 0, 0, 0, 0, 0, 2, 44
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\order\orderSlice.js", "JavaScript", 0, 86, 0, 0, 0, 0, 0, 6, 92
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\user\components\AddressPage.jsx", "JavaScript JSX", 0, 0, 103, 0, 0, 0, 0, 3, 106
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\user\components\EditAddressForm.jsx", "JavaScript JSX", 0, 0, 211, 0, 0, 0, 0, 5, 216
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\user\components\NewAddressForm.jsx", "JavaScript JSX", 0, 0, 200, 0, 0, 0, 0, 7, 207
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\user\userApi.jsx", "JavaScript JSX", 0, 0, 30, 0, 0, 0, 0, 3, 33
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\user\userSlice.jsx", "JavaScript JSX", 0, 0, 29, 0, 0, 0, 0, 6, 35
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\wishlist\WishEmpty.jsx", "JavaScript JSX", 0, 0, 12, 0, 0, 0, 0, 3, 15
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\wishlist\WishItem.jsx", "JavaScript JSX", 0, 0, 60, 0, 0, 0, 0, 5, 65
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\wishlist\WishList.jsx", "JavaScript JSX", 0, 0, 27, 0, 0, 0, 0, 4, 31
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\features\wishlist\wishListSlice.js", "JavaScript", 0, 24, 0, 0, 0, 0, 0, 4, 28
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\hooks\useAuth.jsx", "JavaScript JSX", 0, 0, 6, 0, 0, 0, 0, 3, 9
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\hooks\useCart.jsx", "JavaScript JSX", 0, 0, 16, 0, 0, 0, 0, 4, 20
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\hooks\useIntersection.jsx", "JavaScript JSX", 0, 0, 17, 0, 0, 0, 0, 6, 23
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\hooks\useOrder.jsx", "JavaScript JSX", 0, 0, 7, 0, 0, 0, 0, 3, 10
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\hooks\useUser.jsx", "JavaScript JSX", 0, 0, 14, 0, 0, 0, 0, 5, 19
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\index.css", "CSS", 39, 0, 0, 0, 0, 0, 0, 6, 45
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\index.js", "JavaScript", 0, 18, 0, 0, 0, 0, 3, 5, 26
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\pages\Addresses.jsx", "JavaScript JSX", 0, 0, 5, 0, 0, 0, 0, 3, 8
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\pages\Checkout.jsx", "JavaScript JSX", 0, 0, 217, 0, 0, 0, 1, 6, 224
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\pages\Home.jsx", "JavaScript JSX", 0, 0, 99, 0, 0, 0, 0, 7, 106
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\pages\Login.jsx", "JavaScript JSX", 0, 0, 130, 0, 0, 0, 0, 8, 138
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\pages\OrderHistory.jsx", "JavaScript JSX", 0, 0, 33, 0, 0, 0, 0, 3, 36
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\pages\OrderProcess.jsx", "JavaScript JSX", 0, 0, 60, 0, 0, 0, 0, 3, 63
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\pages\OrderStatus.jsx", "JavaScript JSX", 0, 0, 25, 0, 0, 0, 0, 4, 29
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\pages\Personal.jsx", "JavaScript JSX", 0, 0, 5, 0, 0, 0, 0, 3, 8
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\pages\PreviousOrder.jsx", "JavaScript JSX", 0, 0, 5, 0, 0, 0, 0, 3, 8
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\pages\Products.jsx", "JavaScript JSX", 0, 0, 124, 0, 0, 0, 1, 14, 139
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\pages\Signup.jsx", "JavaScript JSX", 0, 0, 163, 0, 0, 0, 0, 8, 171
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\src\pages\User.jsx", "JavaScript JSX", 0, 0, 38, 0, 0, 0, 0, 5, 43
+"c:\Users\gk725\Desktop\Ecommerce\react-ecommerce\tailwind.config.js", "JavaScript", 0, 14, 0, 0, 0, 0, 1, 3, 18
+"Total", "-", 39, 666, 2754, 18038, 26, 21, 64, 341, 21949
