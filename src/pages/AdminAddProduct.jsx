@@ -61,7 +61,7 @@ const AdminAddProduct = () => {
 	return (
 		<section className="flex justify-center p-4 text-lg font-geo">
 			{show && (
-				<div className="bg-green-600">
+				<div className="absolute w-1/3 bg-green-600">
 					<SyncLoader></SyncLoader>
 					Saving Product..
 				</div>
