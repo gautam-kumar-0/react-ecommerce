@@ -26,6 +26,11 @@ import {fetchOrderByUserAsync} from "./features/order/orderSlice";
 
 import {fetchUserAsync} from "./features/user/userSlice";
 import AddressPage from "./features/user/components/AddressPage";
+import Profile from "./pages/Profile";
+import Logout from "./features/auth/components/Logout";
+import Forgot from "./features/auth/components/Forgot";
+import ProtectedAdmin from "./components/ProtectedAdmin";
+import AdminAddProduct from "./pages/AdminAddProduct";
 function App() {
 	const dispatch = useDispatch();
 	useEffect(() => {
@@ -71,6 +76,14 @@ function App() {
 			),
 		},
 		{
+			path: "/user/profile",
+			element: (
+				<Protected>
+					<Profile />
+				</Protected>
+			),
+		},
+		{
 			path: "/user/addresses",
 			element: (
 				<Protected>
@@ -104,6 +117,14 @@ function App() {
 			),
 		},
 		{path: "/login", element: <Login />},
+		{
+			path: "/logout",
+			element: <Logout />,
+		},
+		{
+			path: "/forgot",
+			element: <Forgot />,
+		},
 		{path: "/register", element: <Signup />},
 		{path: "/products", element: <Products />},
 		{path: "/product/:productId", element: <ProductItem />},
@@ -115,6 +136,10 @@ function App() {
 					<Checkout />
 				</Protected>
 			),
+		},
+		{
+			path: "/admin/new",
+			element: <AdminAddProduct />,
 		},
 	]);
 

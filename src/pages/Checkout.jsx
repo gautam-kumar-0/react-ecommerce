@@ -9,7 +9,7 @@ import {createOrderAsync, selectOrderState} from "../features/order/orderSlice";
 import useUser from "../hooks/useUser";
 
 const Checkout = () => {
-	const {products, cart, total, items} = useCart();
+	const {products, cart} = useCart();
 	const [showAddForm, setShowAddForm] = useState(false);
 	const [shippingAddress, setShippingAddress] = useState(0);
 	const [showError, setShowError] = useState(false);
@@ -202,11 +202,7 @@ const Checkout = () => {
 				<div className="px-4 mt-10 bg-gray-50 lg:mt-0">
 					<div className="">
 						{/*Total*/}
-						<OrderInfo
-							products={products}
-							cart={cart}
-							
-						/>
+						<OrderInfo products={products} cart={cart} />
 
 						<button
 							className="w-full px-6 py-3 mb-4 font-medium text-white bg-gray-900 rounded-md "

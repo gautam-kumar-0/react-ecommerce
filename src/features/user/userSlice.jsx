@@ -17,7 +17,11 @@ const initialState = {
 const userSlice = createSlice({
 	name: "user",
 	initialState,
-	reducers: {},
+	reducers: {
+		clearUser(state) {
+			state.user = initialState.user;
+		},
+	},
 	extraReducers: (builder) => {
 		builder.addCase(fetchUserAsync.fulfilled, (state, action) => {
 			state.user = action.payload;
@@ -29,6 +33,6 @@ const userSlice = createSlice({
 });
 
 export const selectUser = (state) => state.user.user;
-export const {} = userSlice.actions;
+export const {clearUser} = userSlice.actions;
 
 export default userSlice.reducer;

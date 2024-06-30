@@ -7,9 +7,9 @@ import useIntersection from "../hooks/useIntersection";
 const Carousel = () => {
 	const images = [
 		"https://i.dummyjson.com/data/products/2/1.jpg",
-		"https://i.dummyjson.com/data/products/2/2.jpg",
-		"https://i.dummyjson.com/data/products/2/3.jpg",
-		"https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+		"https://i.dummyjson.com/data/products/5/2.jpg",
+		"https://i.dummyjson.com/data/products/6/3.jpg",
+		"https://i.dummyjson.com/data/products/1/thumbnail.jpg",
 	];
 	const slideContainer = useRef(null);
 	const slideShow = useRef(null);

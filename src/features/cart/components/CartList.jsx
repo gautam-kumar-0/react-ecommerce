@@ -14,8 +14,10 @@ const CartList = () => {
 	const numberOfItems = Object.keys(cart).length;
 	const {products, total, items} = useCart();
 	return (
-		<section className="">
-			<h2 className="px-6 text-3xl">Cart [ {numberOfItems}]</h2>
+		<section className="min-h-[80vh] py-4 bg-gray-100">
+			<h2 className="px-6 text-3xl">
+				Cart <span className="font-bold">{numberOfItems}</span>
+			</h2>
 			{numberOfItems ? (
 				<div className="flex flex-row flex-wrap items-start justify-center gap-4">
 					<div className="flex flex-col items-stretch flex-grow-0 gap-6 border rounded-lg sm:p-4">

@@ -18,7 +18,9 @@ export function checkUser(user) {
 		const data = await response.json();
 		if (data.length) {
 			if (data[0].password === user.password) {
-				resolve({data: data[0].id});
+				let loggedUser = data[0];
+				delete loggedUser.password;
+				resolve({data: loggedUser});
 			} else {
 				reject({message: "password doesn't match."});
 			}

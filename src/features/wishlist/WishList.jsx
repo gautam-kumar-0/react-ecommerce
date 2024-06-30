@@ -10,7 +10,7 @@ const WishList = () => {
 
 	return (
 		<>
-			<section className="flex flex-row flex-wrap items-stretch justify-center gap-8 p-8">
+			<section className="flex flex-row flex-wrap items-stretch justify-center gap-8 p-8 bg-gray-100 min-h-[80vh]">
 				{numberofItems ? (
 					<div>
 						{Object.keys(wishlist).map((key) => {

@@ -11,11 +11,10 @@ const ProductCard3 = ({product}) => {
 				/>
 				<div className="flex-grow group ">
 					<h2 className="text-lg font-md line-clamp-1 group-hover:underline group-hover:text-violet-600">
-						Product Name
+						{product.title}
 					</h2>
 					<p className="px-1 mt-1 leading-tight text-gray-600 line-clamp-2 max-w-fit min-h-fit">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-						blanditiis architecto corrupti distinctio soluta dolor?
+						{product.description}
 					</p>
 				</div>
 			</div>

@@ -29,6 +29,7 @@ export const fetchProductsByFilterAsync = createAsyncThunk(
 		return {products, pagination};
 	}
 );
+
 export const productSlice = createSlice({
 	name: "product",
 	initialState,

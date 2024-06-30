@@ -32,7 +32,13 @@ const User = () => {
 					<Link to={"/user/addresses"}>Addresses</Link>
 				</div>
 				<div className="p-4 text-2xl border">
-					<Link to={"/user/personal"}>Personal</Link>
+					<Link to={"/user/personal"}>Change Personal Information</Link>
+				</div>
+				<div className="p-4 text-2xl border">
+					<Link to={"/user/settings"}>Settings</Link>
+				</div>
+				<div className="p-4 text-2xl border">
+					<Link to={"/logout"}>Logout</Link>
 				</div>
 			</div>
 		</div>

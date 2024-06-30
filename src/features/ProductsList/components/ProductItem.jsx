@@ -1,23 +1,35 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Button1 from "../../../components/Button1";
 import Rating from "../../../components/Rating";
 import Heart from "../../../components/Heart";
 import ProductImage from "../../../components/ProductImage";
-import {useSelector} from "react-redux";
-import {getProductById} from "../productListSlice";
+import {useDispatch, useSelector} from "react-redux";
+import {
+	fetchAllProductsAsync,
+	getProductById,
+	selectAllProducts,
+} from "../productListSlice";
 import {useParams} from "react-router-dom";
 import {HashLoader} from "react-spinners";
 
 const ProductItem = () => {
 	const {productId} = useParams();
 
-	const product = useSelector((state) => getProductById(state, productId));
+	const products = useSelector(selectAllProducts);
 
 	const [liked, setLiked] = useState();
+	const dispatch = useDispatch();
+	useEffect(() => {
+		dispatch(fetchAllProductsAsync());
+	}, []);
+	const product = products.find((product) => product.id == productId);
+
+	console.log(products, product);
+
 	if (!product) {
+		console.log(product);
 		return <HashLoader />;
 	}
-
 	return (
 		<div className="flex flex-wrap overflow-hidden border divide-x-2 lg:flex-nowrap">
 			<div className="w-full p-2 pt-4 border lg:w-1/2 border-violet-300">
@@ -31,7 +43,7 @@ const ProductItem = () => {
 				<p className="mt-1 text-2xl text-gray-700 ">{product.description}</p>
 
 				<p className="text-2xl">
-					<Rating rating={product.rating} />
+					<Rating rating={4} />
 				</p>
 				<p className="flex flex-col gap-2 ">
 					<span className="text-2xl font-medium">Special Price </span>

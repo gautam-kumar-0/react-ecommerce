@@ -98,8 +98,8 @@ const NavBar = () => {
 				}  transition  overflow-hidden flex  lg:static  z-10 top-full left-0 border-t-1 border  lg:bg-transparent border-b lg:border-none  border-indigo-200 dark:border-white/5 py-2  pr-8  flex-row-reverse lg:flex-row justify-end  items-center flex-1 gap-8 order-4 lg:order-3 min-w-full lg:min-w-[auto]`}
 			>
 				<StyledItem
-					className="relative  hover:!bg-rose-500 py-2"
-					activeClass={"!bg-rose-500 dark:!bg-rose-500 text-white"}
+					className="relative  hover:!text-rose-500 py-2"
+					activeClass={"!text-rose-500 "}
 					to={"/wishlist"}
 					title="Wishlist"
 				>
@@ -112,8 +112,8 @@ const NavBar = () => {
 					</span>
 				</StyledItem>
 				<StyledItem
-					className="relative hover:!bg-indigo-500   py-2 bg-white"
-					activeClass={"!bg-indigo-500 dark:!bg-indigo-500 text-white"}
+					className="relative hover:!text-indigo-500   py-2 bg-white"
+					activeClass={"text-indigo-500 "}
 					to={"/cart"}
 				>
 					<LuShoppingCart />
@@ -132,7 +132,7 @@ const NavBar = () => {
 						</Link>
 					) : (
 						<StyledItem
-							className="relative mx-4 hover:bg-rose-500"
+							className="relative mx-4 hover:text-indigo-500"
 							to={"/login"}
 						>
 							Login

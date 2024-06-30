@@ -11,10 +11,12 @@ import Button1 from "../components/Button1";
 import {useSelector} from "react-redux";
 import {ClipLoader} from "react-spinners";
 import useCart from "../hooks/useCart";
+import {selectWish} from "../features/wishlist/wishListSlice";
 
 const Home = () => {
 	const products = useSelector(selectAllProducts);
 	const {products: cartProducts} = useCart();
+	const wishlist = useSelector(selectWish);
 	if (products.length === 0) {
 		return (
 			<div className="flex mt-12 font-bold place-content-center text-8xl">
@@ -48,11 +50,11 @@ const Home = () => {
 				</h2>
 				<div className="flex flex-col gap-2 overflow-hidden lg:flex-row">
 					<aside className="p-3 bg-white lg:basis-1/2">
-						<h3 className="p-2 text-2xl">Items in Cart</h3>
+						<h3 className="p-2 text-2xl">Cart</h3>
 						<div className="flex flex-col overflow-y-scroll border-2 border-violet-300 h-60 custom-scrollbar">
 							{cartProducts ? (
 								cartProducts.map((product) => (
-									<ProductCard3 product={product} />
+									<ProductCard3 key={product.id * 11} product={product} />
 								))
 							) : (
 								<p>No Items in Cart</p>
@@ -62,11 +64,12 @@ const Home = () => {
 					</aside>
 
 					<aside className="p-3 bg-white lg:basis-1/2">
-						<h3 className="p-2 text-2xl">Items in Wishlist</h3>
+						<h3 className="p-2 text-2xl">Wishlist</h3>
 						<div className="flex flex-col overflow-y-scroll border-2 border-violet-300 h-60 custom-scrollbar">
-							<ProductCard3 product={products[0]} />
-							<ProductCard3 product={products[1]} />
-							<ProductCard3 product={products[1]} />
+							{wishlist &&
+								Object.keys(wishlist).map((key) => (
+									<ProductCard3 key={key} product={products[key]} />
+								))}
 						</div>
 						<Button1 className="m-2 mx-auto rounded-full">
 							Open Wishlist

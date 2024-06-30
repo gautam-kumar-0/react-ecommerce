@@ -15,10 +15,11 @@ const OrderStatus = () => {
 	const {orderId} = useParams();
 	const order = useSelector((state) => state.order.orderById);
 	const a = order.shippingAddress;
-	let productsIds = Object.keys(order.cart) || [1];
+	let productsIds = [];
 	useEffect(() => {
 		dispatch(fetchOrderByIdAsync(orderId));
 	}, []);
+	if (order.cart) productsIds = Object.keys(order.cart);
 	const products = useSelector((state) => getProductByIds(state, productsIds));
 	if (!products || !order?.id) return <BarLoader />;
 
@@ -65,20 +66,20 @@ const OrderStatus = () => {
 								htmlFor={`address`}
 							>
 								<span className="text-lg font-medium">
-									{a.type === "Work" ? <LuBuilding2 /> : <LuHome />}
+									{a?.type === "Work" ? <LuBuilding2 /> : <LuHome />}
 								</span>
 								<div className="ml-5 font-light text-gray-500 font-geo ">
 									<span className="mt-2 font-semibold text-gray-900">
-										{a.name}
+										{a?.name}
 									</span>
-									<span className="m-1">{a.landmark},</span>
-									<span className="m-1">{a.street},</span>
-									<span className="m-1">{a.city},</span>
-									<span className="m-1">{a.district},</span>
-									<span className="m-1">{a.state},</span>
-									<span className="m-1">{a.pin}.</span>
+									<span className="m-1">{a?.landmark},</span>
+									<span className="m-1">{a?.street},</span>
+									<span className="m-1">{a?.city},</span>
+									<span className="m-1">{a?.district},</span>
+									<span className="m-1">{a?.state},</span>
+									<span className="m-1">{a?.pin}.</span>
 									<p className="text-sm leading-6 text-slate-500">
-										{a.estimates}
+										{a?.estimates}
 									</p>
 								</div>
 							</div>
