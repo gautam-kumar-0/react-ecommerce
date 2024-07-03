@@ -4,11 +4,7 @@ import Rating from "../../../components/Rating";
 import Heart from "../../../components/Heart";
 import ProductImage from "../../../components/ProductImage";
 import {useDispatch, useSelector} from "react-redux";
-import {
-	fetchAllProductsAsync,
-	getProductById,
-	selectAllProducts,
-} from "../productListSlice";
+import {fetchAllProductsAsync, selectAllProducts} from "../productListSlice";
 import {useParams} from "react-router-dom";
 import {HashLoader} from "react-spinners";
 

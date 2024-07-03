@@ -31,6 +31,9 @@ import Logout from "./features/auth/components/Logout";
 import Forgot from "./features/auth/components/Forgot";
 import ProtectedAdmin from "./components/ProtectedAdmin";
 import AdminAddProduct from "./pages/AdminAddProduct";
+import AdminProductEdit from "./pages/AdminProductEdit";
+import AdminProducts from "./pages/AdminProducts";
+import UserProducts from "./pages/UserProducts";
 function App() {
 	const dispatch = useDispatch();
 	useEffect(() => {
@@ -126,7 +129,7 @@ function App() {
 			element: <Forgot />,
 		},
 		{path: "/register", element: <Signup />},
-		{path: "/products", element: <Products />},
+		{path: "/products", element: <UserProducts />},
 		{path: "/product/:productId", element: <ProductItem />},
 
 		{
@@ -140,6 +143,14 @@ function App() {
 		{
 			path: "/admin/new",
 			element: <AdminAddProduct />,
+		},
+		{
+			path: "/admin/product/:id",
+			element: <AdminProductEdit />,
+		},
+		{
+			path: "/admin/products",
+			element: <AdminProducts />,
 		},
 	]);
 

@@ -26,6 +26,7 @@ const NavBar = () => {
 		{name: "Home", to: "/"},
 
 		{name: "Product", to: "/products"},
+		{name: "Admin", to: "/admin/products"},
 	];
 
 	const [showMenu, setShowMenu] = useState(true);

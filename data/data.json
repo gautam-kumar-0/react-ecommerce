@@ -39,29 +39,34 @@
     },
     {
       "id": "3",
-      "title": "Samsung Universe 9",
+      "title": "Samsung Universe 99999",
       "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
       "price": 1249,
       "discountPercentage": 15.46,
       "rating": 4.09,
       "stock": 36,
-      "brand": "Samsung",
-      "category": "smartphones",
+      "brand": "nonne",
+      "category": "none",
       "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
       "images": [
-        "https://cdn.dummyjson.com/product-images/3/1.jpg"
-      ]
+        "https://cdn.dummyjson.com/product-images/3/1.jpg",
+        "12",
+        "12",
+        "12",
+        "12"
+      ],
+      "discount": "12"
     },
     {
       "id": "4",
-      "title": "OPPOF19",
+      "title": "OPPOF19 Pro",
       "description": "OPPO F19 is officially announced on April 2021.",
       "price": 280,
       "discountPercentage": 17.91,
       "rating": 4.3,
       "stock": 123,
-      "brand": "OPPO",
-      "category": "smartphones",
+      "brand": "nonne",
+      "category": "none",
       "thumbnail": "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg",
       "images": [
         "https://cdn.dummyjson.com/product-images/4/1.jpg",
@@ -69,7 +74,8 @@
         "https://cdn.dummyjson.com/product-images/4/3.jpg",
         "https://cdn.dummyjson.com/product-images/4/4.jpg",
         "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg"
-      ]
+      ],
+      "discount": "0"
     },
     {
       "id": "5",
@@ -553,186 +559,35 @@
       ]
     },
     {
-      "id": "4469",
-      "title": "tilasdf",
-      "description": "asdfasdf",
-      "price": "1",
-      "stock": "1",
+      "id": "60c6",
+      "title": "M416",
+      "description": "The ultilmate weapon of choice for the god of wars.",
+      "price": 112,
+      "stock": 12,
       "brand": "nonne",
       "category": "none",
-      "thumbnail": "1",
-      "discountPercentage": "01",
+      "thumbnail": "12121",
+      "discountPercentage": 23,
+      "rating": 0,
       "images": [
-        "1",
-        "1",
-        "1",
-        "11",
-        "1"
-      ]
-    },
-    {
-      "id": "0cb8",
-      "title": "This ",
-      "description": "this",
-      "price": "1",
-      "stock": "1",
-      "brand": "nonne",
-      "category": "none",
-      "thumbnail": "1",
-      "discountPercentage": "1",
-      "ratings": 0,
-      "images": [
-        "1",
-        "1",
-        "1",
-        "1",
-        "1"
-      ]
-    },
-    {
-      "id": "0dd0",
-      "title": "This ",
-      "description": "this",
-      "price": "1",
-      "stock": "1",
-      "brand": "nonne",
-      "category": "none",
-      "thumbnail": "1",
-      "discountPercentage": "1",
-      "ratings": 0,
-      "images": [
-        "1",
-        "1",
-        "1",
-        "1",
-        "1"
-      ]
-    },
-    {
-      "id": "20b8",
-      "title": "This ",
-      "description": "this",
-      "price": "1",
-      "stock": "1",
-      "brand": "nonne",
-      "category": "none",
-      "thumbnail": "1",
-      "discountPercentage": "1",
-      "ratings": 0,
-      "images": [
-        "1",
-        "1",
-        "1",
-        "1",
-        "1"
-      ]
-    },
-    {
-      "id": "dabd",
-      "title": "a",
-      "description": "ad",
-      "price": "1",
-      "stock": "1",
-      "brand": "nonne",
-      "category": "none",
-      "thumbnail": "1",
-      "discountPercentage": "01",
-      "ratings": 0,
-      "images": [
-        "11",
-        "1",
-        "1",
-        "1",
-        "1"
-      ]
-    },
-    {
-      "id": "dbfc",
-      "title": "a",
-      "description": "a",
-      "price": "1",
-      "stock": "1",
-      "brand": "nonne",
-      "category": "none",
-      "thumbnail": "1",
-      "discountPercentage": "1",
-      "ratings": 0,
-      "images": [
-        "11",
-        "1",
-        "1",
-        "11",
-        "11"
-      ]
-    },
-    {
-      "id": "9ab3",
-      "title": "12",
-      "description": "12121",
-      "price": "1211",
-      "stock": "1121",
-      "brand": "nonne",
-      "category": "none",
-      "thumbnail": "21212",
-      "discountPercentage": "2111212121",
-      "ratings": 0,
-      "images": [
+        "21212",
+        "1212",
+        "1212121212",
         "121212",
-        "121",
-        "2121",
-        "qw",
-        "12"
+        "212"
       ]
     },
     {
-      "id": "d08a",
-      "title": "God of war",
-      "description": "loaer lkjakjsdf lalkjeljr jlkjaslkdjfasdf ",
-      "price": 100,
-      "stock": 10,
-      "brand": "nonne",
-      "category": "none",
-      "thumbnail": "asdfasd",
-      "discountPercentage": 7,
-      "ratings": 0,
-      "images": [
-        "asdfasdf",
-        "asdf",
-        "dfasdfasdf",
-        "asdfas",
-        "asdfasdf"
-      ]
-    },
-    {
-      "id": "d54e",
-      "title": "te",
+      "id": "d2da",
+      "title": "adf",
       "description": "adsf",
-      "price": 12,
-      "stock": 21,
-      "brand": "nonne",
-      "category": "none",
-      "thumbnail": "12",
-      "discountPercentage": 11,
-      "ratings": 0,
-      "images": [
-        "12",
-        "12",
-        "12",
-        "12",
-        "12"
-      ]
-    },
-    {
-      "id": "9b2b",
-      "title": "This is titlaa",
-      "description": "asdf",
       "price": 1,
       "stock": 1,
       "brand": "nonne",
       "category": "none",
       "thumbnail": "1",
       "discountPercentage": 1,
-      "ratings": 0,
+      "rating": 0,
       "images": [
         "1",
         "1",
@@ -742,22 +597,136 @@
       ]
     },
     {
-      "id": "0054",
-      "title": "a",
-      "description": "asdf",
+      "id": "8b24",
+      "title": "Realme P1",
+      "description": "The all new realme P1 5g .",
+      "price": 122,
+      "stock": 11,
+      "brand": "nonne",
+      "category": "none",
+      "thumbnail": "12",
+      "discountPercentage": 11,
+      "rating": 0,
+      "images": [
+        "12",
+        "12",
+        "12",
+        "12",
+        "12"
+      ]
+    },
+    {
+      "id": "1c77",
+      "title": "12",
+      "description": "121",
+      "price": 121,
+      "stock": 121,
+      "brand": "nonne",
+      "category": "none",
+      "thumbnail": "121",
+      "discountPercentage": 19,
+      "rating": 0,
+      "images": [
+        "121",
+        "2121212",
+        "21212121",
+        "2121",
+        "121"
+      ]
+    },
+    {
+      "id": "cc6d",
+      "title": "123123",
+      "description": "123123",
+      "price": 123123,
+      "stock": 1231,
+      "brand": "nonne",
+      "category": "none",
+      "thumbnail": "31231",
+      "discountPercentage": 2292312312,
+      "rating": 0,
+      "images": [
+        "23123",
+        "123123",
+        "123123123",
+        "123123123",
+        "123"
+      ]
+    },
+    {
+      "id": "148e",
+      "title": "asd",
+      "description": "asdasdf",
+      "price": 12311,
+      "stock": 119121,
+      "brand": "nonne",
+      "category": "none",
+      "thumbnail": "121",
+      "discountPercentage": 121,
+      "rating": 0,
+      "images": [
+        "212",
+        "121",
+        "121212",
+        "21",
+        "2121"
+      ]
+    },
+    {
+      "id": "047d",
+      "title": "asdasd",
+      "description": "sadf",
+      "price": 1,
+      "stock": 1,
+      "brand": "nonne",
+      "category": "none",
+      "thumbnail": "1",
+      "discountPercentage": 1,
+      "rating": 0,
+      "images": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "id": "9a87",
+      "title": "This",
+      "description": "This is system generated",
       "price": 12,
       "stock": 12,
       "brand": "nonne",
       "category": "none",
-      "thumbnail": "121",
-      "discountPercentage": 120,
-      "ratings": 0,
+      "thumbnail": "12",
+      "discountPercentage": 11,
+      "rating": 0,
       "images": [
-        "1212121",
-        "121212121",
-        "21212",
-        "12121",
-        "212121121"
+        "12",
+        "12",
+        "12",
+        "12",
+        "12"
+      ]
+    },
+    {
+      "id": "9d80",
+      "title": "realme narzo 30",
+      "description": "adsfasdfad",
+      "price": 1,
+      "stock": 1,
+      "discount": "1",
+      "brand": "nonne",
+      "category": "none",
+      "thumbnail": "1",
+      "discountPercentage": null,
+      "images": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
       ]
     }
   ],

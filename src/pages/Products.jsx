@@ -38,7 +38,7 @@ const PageNum = ({page, setPage, children, className}) => {
 	);
 };
 
-const Products = () => {
+const Products = ({productList}) => {
 	const dispatch = useDispatch();
 	const initialFilter = {
 		category: "",
@@ -108,7 +108,7 @@ const Products = () => {
 				setShow={setShowMenu}
 			/>
 
-			<ProductList />
+			{productList}
 
 			<div className="flex justify-center m-2 border">
 				<PageBtn page={prev} setPage={setPage}>

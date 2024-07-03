@@ -67,8 +67,7 @@ export const selectPagination = (state) => state.product.pagination;
 export const getProductById = createSelector(
 	selectAllProducts,
 	(state, productId) => productId,
-	(products, productId) =>
-		products.find((product) => Number(product.id) === Number(productId))
+	(products, productId) => products.find((product) => product.id == productId)
 );
 export const getProductByIds = createSelector(
 	selectAllProducts,

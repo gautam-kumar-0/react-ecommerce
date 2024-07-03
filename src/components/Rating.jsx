@@ -1,6 +1,7 @@
 import {TiStarFullOutline} from "react-icons/ti";
 
 const Rating = ({rating}) => {
+	rating = rating || 0;
 	const integer = Math.floor(rating);
 	const decimal = Math.floor((rating - integer).toFixed(2) * 100);
 	const semiWidth = `${decimal < 40 ? decimal + 5 : decimal}%`;
