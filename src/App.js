@@ -34,6 +34,7 @@ import AdminAddProduct from "./pages/AdminAddProduct";
 import AdminProductEdit from "./pages/AdminProductEdit";
 import AdminProducts from "./pages/AdminProducts";
 import UserProducts from "./pages/UserProducts";
+import ProductItemAdmin from "./features/ProductsList/components/ProductItemAdmin";
 function App() {
 	const dispatch = useDispatch();
 	useEffect(() => {
@@ -145,7 +146,11 @@ function App() {
 			element: <AdminAddProduct />,
 		},
 		{
-			path: "/admin/product/:id",
+			path: "/admin/product/:productId",
+			element: <ProductItemAdmin />,
+		},
+		{
+			path: "/admin/product/edit/:productId",
 			element: <AdminProductEdit />,
 		},
 		{

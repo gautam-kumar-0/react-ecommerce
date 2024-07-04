@@ -23,7 +23,7 @@ const AdminProductForm = ({onSubmit, values}) => {
 	useEffect(() => {
 		if (status === "fulfilled") {
 			console.log(product);
-			navigate(`/product/${product.id}`, {replace: false});
+			navigate(`/admin/product/${product.id}`, {replace: false});
 		} else if (status === "rejected") {
 			setError(error);
 			console.log(error);
@@ -37,14 +37,7 @@ const AdminProductForm = ({onSubmit, values}) => {
 			dispatch(resetAdminProduct());
 		};
 	}, [status, navigate]);
-	// useEffect(() => {
-	// 	if (values) {
-	// 		for (const field in values) {
-	// 			setValue(field, values[field]);
-	// 			console.log(field, values[field]);
-	// 		}
-	// 	}
-	// }, [values]);
+
 	return (
 		<section className="flex justify-center p-4 text-lg font-geo">
 			<form

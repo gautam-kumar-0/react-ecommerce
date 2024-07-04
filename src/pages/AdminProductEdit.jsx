@@ -7,9 +7,9 @@ import {getProductById} from "../features/ProductsList/productListSlice";
 const AdminProductEdit = () => {
 	const dispatch = useDispatch();
 
-	const {id} = useParams();
-	const product = useSelector((state) => getProductById(state, id));
-	console.log(product, id);
+	const {productId} = useParams();
+	const product = useSelector((state) => getProductById(state, productId));
+	console.log(product, productId);
 	const values = {
 		...product,
 		image1: product?.images[0],

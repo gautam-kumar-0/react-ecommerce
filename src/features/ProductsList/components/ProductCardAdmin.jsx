@@ -62,14 +62,14 @@ const ProductCardAdmin = ({product}) => {
 				</div>
 				<div className="flex flex-row items-stretch justify-between gap-3 mt-3 bg-gradient-lr from-violet-300/30 to-indigo-300/30 dark:bg-none">
 					<Button1
-						onClick={() => navigate(`/product/${product.id}`)}
+						onClick={() => navigate(`/admin/product/${product.id}`)}
 						className={"rounded-r-full pr-8"}
 					>
 						View
 					</Button1>
 					<Button2
 						onClick={() => {
-							navigate(`/admin/product/${product.id}`);
+							navigate(`/admin/product/edit/${product.id}`);
 						}}
 						className={"rounded-l-full "}
 					>
