@@ -45,7 +45,11 @@ const AdminProductEdit = () => {
 	return (
 		<div className="px-4">
 			<h1 className="text-2xl font-bold">Edit Product</h1>
-			<AdminProductForm onSubmit={onSubmit} values={values} />
+			<AdminProductForm
+				onSubmit={onSubmit}
+				values={values}
+				resetName={"Clear Changes"}
+			/>
 		</div>
 	);
 };

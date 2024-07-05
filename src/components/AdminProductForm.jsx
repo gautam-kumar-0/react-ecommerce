@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 import {SyncLoader} from "react-spinners";
 import {resetAdminProduct} from "../features/adminProduct/adminProductSlice";
 
-const AdminProductForm = ({onSubmit, values}) => {
+const AdminProductForm = ({onSubmit, values, resetName}) => {
 	const {
 		register,
 		handleSubmit,
@@ -112,27 +112,21 @@ const AdminProductForm = ({onSubmit, values}) => {
 				<div className="flex col-span-6 gap-24">
 					<label htmlFor="brand" className="flex gap-2">
 						<span className="p-1">Brand</span>
-						<select
+						<input
 							name="brand"
 							id="brand"
 							{...register("brand", {required: true})}
 							className="p-1 text-indigo-600 border-2 border-gray-300 rounded-none focus:outline-none "
-						>
-							<option value="nonne"> None</option>
-							<option value=""> large option</option>
-						</select>
+						/>
 					</label>
 					<label htmlFor="category" className="flex gap-2 ">
 						<span className="p-1">Category</span>
-						<select
+						<input
 							name=""
 							id="category"
 							{...register("category", {required: true})}
 							className="p-1 text-indigo-600 border-2 border-gray-300 focus:outline-none "
-						>
-							<option value="none">None</option>
-							<option value="">very large option</option>
-						</select>
+						/>
 					</label>
 				</div>
 				<div className="grid justify-around grid-cols-3 col-span-8 gap-4 border">
@@ -230,7 +224,7 @@ const AdminProductForm = ({onSubmit, values}) => {
 					)}
 					<input
 						type="button"
-						value={"Reset"}
+						value={resetName}
 						onClick={() => reset()}
 						className="px-6 py-2 text-lg font-semibold text-gray-100 rounded-full font-geo bg-rose-500 hover:bg-rose-600 ring-0 ring-rose-400 focus:ring-1"
 					/>

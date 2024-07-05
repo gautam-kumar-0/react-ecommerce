@@ -32,7 +32,7 @@ const AdminAddProduct = () => {
 	return (
 		<div className="px-4">
 			<h1 className="text-2xl font-bold">Add New Product</h1>
-			<AdminProductForm onSubmit={onSubmit} />
+			<AdminProductForm onSubmit={onSubmit} resetName={"Reset"} />
 		</div>
 	);
 };
