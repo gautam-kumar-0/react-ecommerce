@@ -58,7 +58,6 @@ const ProductCardAdmin = ({product}) => {
 				</div>
 				<div className="flex flex-row justify-between px-2 ">
 					<Rating rating={product.rating} />
-					<Heart liked={wishlist} onClick={toggleWish} />
 				</div>
 				<div className="flex flex-row items-stretch justify-between gap-3 mt-3 bg-gradient-lr from-violet-300/30 to-indigo-300/30 dark:bg-none">
 					<Button1

@@ -35,8 +35,10 @@
         "https://cdn.dummyjson.com/product-images/2/1.jpg",
         "https://cdn.dummyjson.com/product-images/2/2.jpg",
         "https://cdn.dummyjson.com/product-images/2/3.jpg",
-        "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
-      ]
+        "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+        "12121"
+      ],
+      "discount": "10"
     },
     {
       "id": "3",
