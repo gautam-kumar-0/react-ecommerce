@@ -1,8 +1,14 @@
 import {useDispatch, useSelector} from "react-redux";
-import {updateProductsAsync} from "../features/adminProduct/adminProductSlice";
+import {
+	deleteProductsAsync,
+	resetAdminProduct,
+	updateProductsAsync,
+} from "../features/adminProduct/adminProductSlice";
 import AdminProductForm from "../components/AdminProductForm";
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {getProductById} from "../features/ProductsList/productListSlice";
+import {TiDelete} from "react-icons/ti";
+import {useEffect} from "react";
 
 const AdminProductEdit = () => {
 	const dispatch = useDispatch();
@@ -41,6 +47,17 @@ const AdminProductEdit = () => {
 		delete newproduct.image5;
 		dispatch(updateProductsAsync({...newproduct, images}));
 	};
+	const handleDelete = () => {
+		dispatch(deleteProductsAsync(productId));
+	};
+	const navigate = useNavigate();
+	const {status} = useSelector((state) => state.adminProduct);
+	useEffect(() => {
+		if (status === "deleted") navigate("/admin/products");
+		return () => {
+			dispatch(resetAdminProduct());
+		};
+	}, [status, navigate]);
 
 	return (
 		<div className="px-4">
@@ -50,6 +67,9 @@ const AdminProductEdit = () => {
 				values={values}
 				resetName={"Clear Changes"}
 			/>
+			<button onClick={handleDelete}>
+				<TiDelete />
+			</button>
 		</div>
 	);
 };

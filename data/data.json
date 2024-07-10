@@ -1,6 +1,7 @@
 {
   "products": [
     {
+      "deleted": true,
       "id": "1",
       "title": "iPhone 9",
       "description": "An apple mobile which is nothing like apple",
@@ -24,7 +25,7 @@
       "id": "2",
       "title": "iPhone X",
       "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-      "price": 899,
+      "price": 12121,
       "discountPercentage": 17.94,
       "rating": 4.44,
       "stock": 34,
@@ -38,7 +39,8 @@
         "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
         "12121"
       ],
-      "discount": "10"
+      "discount": "10",
+      "deleted": true
     },
     {
       "id": "3",

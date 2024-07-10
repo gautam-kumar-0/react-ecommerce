@@ -1,0 +1,36 @@
+Date : 2024-07-10 08:33:52
+Directory : c:\Users\gk725\Desktop\Gautam\Ecommerce\react-ecommerce\src
+Total : 5 files,  49 codes, 0 comments, 2 blanks, all 51 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| JavaScript     |          2 |         32 |          0 |          2 |         34 |
+| JavaScript JSX |          3 |         17 |          0 |          0 |         17 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                              | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                 |          5 |         49 |          0 |          2 |         51 |
+| components                                                                                                        |          1 |         -6 |          0 |          0 |         -6 |
+| features                                                                                                          |          3 |         31 |          0 |          2 |         33 |
+| features\ProductsList                                                                                             |          1 |         -1 |          0 |          0 |         -1 |
+| features\ProductsList\components                                                                                  |          1 |         -1 |          0 |          0 |         -1 |
+| features\adminProduct                                                                                             |          2 |         32 |          0 |          2 |         34 |
+| pages                                                                                                             |          1 |         24 |          0 |          0 |         24 |
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                                                          | language       | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| c:\Users\gk725\Desktop\Gautam\Ecommerce\react-ecommerce\src\components\AdminProductForm.jsx                       | JavaScript JSX |         -6 |          0 |          0 |         -6 |
+| c:\Users\gk725\Desktop\Gautam\Ecommerce\react-ecommerce\src\features\ProductsList\components\ProductCardAdmin.jsx | JavaScript JSX |         -1 |          0 |          0 |         -1 |
+| c:\Users\gk725\Desktop\Gautam\Ecommerce\react-ecommerce\src\features\adminProduct\adminProductApi.js              | JavaScript     |         14 |          0 |          2 |         16 |
+| c:\Users\gk725\Desktop\Gautam\Ecommerce\react-ecommerce\src\features\adminProduct\adminProductSlice.js            | JavaScript     |         18 |          0 |          0 |         18 |
+| c:\Users\gk725\Desktop\Gautam\Ecommerce\react-ecommerce\src\pages\AdminProductEdit.jsx                            | JavaScript JSX |         24 |          0 |          0 |         24 |
+| Total                                                                                                             |                |         49 |          0 |          2 |         51 |
++-------------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+

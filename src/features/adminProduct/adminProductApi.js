@@ -25,13 +25,13 @@ export function updateProduct(product) {
 	});
 }
 
-export function deleteProduct(product) {
+export function deleteProduct(productId) {
 	return new Promise(async (resolve) => {
 		const response = await fetch(
-			`http://localhost:4000/products/${product.id}`,
+			`http://localhost:4000/products/${productId}`,
 			{
-				method: "PUT",
-				body: {deleted: true},
+				method: "PATCH",
+				body: JSON.stringify({deleted: true}),
 				headers: {"content-type": "application/json"},
 			}
 		);
