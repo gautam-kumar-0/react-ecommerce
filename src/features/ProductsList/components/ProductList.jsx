@@ -7,7 +7,9 @@ const ProductList = () => {
 	return (
 		<div className="grid grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-6 p-4 justify-center ring ">
 			{products.map((product, i) => {
-				return <ProductCard key={i} product={product} />;
+				if (product.deleted !== true)
+					return <ProductCard key={i} product={product} />;
+				else return null;
 			})}
 			{products.length === 0 && (
 				<>

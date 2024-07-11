@@ -7,8 +7,8 @@ import {
 import AdminProductForm from "../components/AdminProductForm";
 import {useNavigate, useParams} from "react-router-dom";
 import {getProductById} from "../features/ProductsList/productListSlice";
-import {TiDelete} from "react-icons/ti";
 import {useEffect} from "react";
+import {MdDelete} from "react-icons/md";
 
 const AdminProductEdit = () => {
 	const dispatch = useDispatch();
@@ -57,7 +57,7 @@ const AdminProductEdit = () => {
 		return () => {
 			dispatch(resetAdminProduct());
 		};
-	}, [status, navigate]);
+	}, [status, navigate, dispatch]);
 
 	return (
 		<div className="px-4">
@@ -67,8 +67,11 @@ const AdminProductEdit = () => {
 				values={values}
 				resetName={"Clear Changes"}
 			/>
-			<button onClick={handleDelete}>
-				<TiDelete />
+			<button
+				onClick={handleDelete}
+				className="p-2 text-xl bg-white rounded-md text-rose-400"
+			>
+				<MdDelete />
 			</button>
 		</div>
 	);

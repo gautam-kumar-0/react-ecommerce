@@ -1,26 +1,12 @@
 import Image from "../../../components/Image";
-import {LuShoppingCart} from "react-icons/lu";
 import Rating from "../../../components/Rating";
 import Button1 from "../../../components/Button1";
 import Button2 from "../../../components/Button2";
-import Heart from "../../../components/Heart";
-import {useDispatch, useSelector} from "react-redux";
-import {addToCartAsync as add, selectCart} from "../../cart/cartListSlice";
-import {TiEdit, TiShoppingCart} from "react-icons/ti";
-import {addW, removeW, selectWishById} from "../../wishlist/wishListSlice";
-import {useLocation, useNavigate} from "react-router-dom";
-import useUser from "../../../hooks/useUser";
+import {TiEdit} from "react-icons/ti";
+import {MdDelete} from "react-icons/md";
+import {useNavigate} from "react-router-dom";
 
 const ProductCardAdmin = ({product}) => {
-	const wishlist = useSelector((state) => selectWishById(state, product.id));
-	const user = useUser();
-	const dispatch = useDispatch();
-	const cart = useSelector(selectCart);
-	const location = useLocation();
-	const toggleWish = () => {
-		if (wishlist) dispatch(removeW({id: product.id}));
-		else dispatch(addW({id: product.id}));
-	};
 	const navigate = useNavigate();
 	if (!product) {
 		return <p>Loading</p>;
@@ -28,6 +14,11 @@ const ProductCardAdmin = ({product}) => {
 	return (
 		<div className=" border dark:border-white/20 relative my-4 text-indigo-600 rounded-md transition-all bg-white cursor-pointer dark:bg-black shadow-[0_0_0_1px_rgba(124,65,224,.1)]  dark:text-indigo-300 font-jose flex-1 ">
 			<div className="flex-1 h-full flex flex-col justify-between rounded-[inherit] overflow-hidden">
+				{product?.deleted && (
+					<div className="absolute z-10 p-2 text-xl bg-white rounded-md text-rose-400 top-1 left-1">
+						<MdDelete />
+					</div>
+				)}
 				<div
 					onClick={() => navigate(`/product/${product.id}`)}
 					className="relative text-6xl bg-gray-100 h-60"

@@ -60,7 +60,8 @@
         "12",
         "12"
       ],
-      "discount": "12"
+      "discount": "12",
+      "deleted": true
     },
     {
       "id": "4",
@@ -80,7 +81,8 @@
         "https://cdn.dummyjson.com/product-images/4/4.jpg",
         "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg"
       ],
-      "discount": "0"
+      "discount": "0",
+      "deleted": true
     },
     {
       "id": "5",
@@ -115,7 +117,8 @@
         "https://cdn.dummyjson.com/product-images/6/2.jpg",
         "https://cdn.dummyjson.com/product-images/6/3.png",
         "https://cdn.dummyjson.com/product-images/6/4.jpg"
-      ]
+      ],
+      "deleted": true
     },
     {
       "id": "7",
