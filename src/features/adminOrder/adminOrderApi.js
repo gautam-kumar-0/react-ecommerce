@@ -1,22 +1,17 @@
-export function fetchOrderByFilter(filter, sort, page) {
-  return new Promise(async (resolve) => {
-    let queryString = `?_page=${page}&_per_page=10&`;
-    for (let type in filter) {
-      if (filter[type]) {
-        queryString += `${[type]}=${filter[type]}&`;
-      }
-    }
-    if (sort.by) {
-      const order = sort.order === "asc" ? "" : "-";
-      queryString += `_sort=${order}${sort.by}`;
-    }
+export function fetchOrderByFilter(params) {
+	return new Promise(async (resolve) => {
+		console.log("Params", params, params.sort);
+		let queryString = `?_page=1&_per_page=10&`;
 
-    const response = await fetch(
-      `http://localhost:4000/orders${queryString}`
-    );
+		if (params?.sort) {
+			const order = params.sort.reverse ? "-" : "";
+			queryString += `_sort=${order}${params.sort.sortKey}`;
+		}
+		console.log("QueryString", queryString);
+		const response = await fetch(`http://localhost:4000/orders${queryString}`);
 
-    const data = await response.json();
-
-    resolve(data);
-  });
+		const data = await response.json();
+		console.log(data, response);
+		resolve({data});
+	});
 }

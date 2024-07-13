@@ -35,6 +35,7 @@ import AdminProductEdit from "./pages/AdminProductEdit";
 import AdminProducts from "./pages/AdminProducts";
 import UserProducts from "./pages/UserProducts";
 import ProductItemAdmin from "./features/ProductsList/components/ProductItemAdmin";
+import AdminOrders from "./pages/AdminOrders";
 function App() {
 	const dispatch = useDispatch();
 	useEffect(() => {
@@ -156,6 +157,10 @@ function App() {
 		{
 			path: "/admin/products",
 			element: <AdminProducts />,
+		},
+		{
+			path: "/admin/orders",
+			element: <AdminOrders />,
 		},
 	]);
 
