@@ -12,11 +12,8 @@ import {
 import {useSort, HeaderCellSort} from "@table-library/react-table-library/sort";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchOrderByFilterAsync, selectAdminOrder} from "../adminOrderSlice";
-import {
-	fetchProductsByFilterAsync,
-	getProductById,
-} from "../../ProductsList/productListSlice";
-import {format, formatRelative} from "date-fns";
+
+import {format} from "date-fns";
 import OrderList from "../../order/components/OrderList";
 const OrderTable = () => {
 	const [data, setData] = React.useState({
