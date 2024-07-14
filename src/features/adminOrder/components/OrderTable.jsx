@@ -1,5 +1,8 @@
 import * as React from "react";
 
+// composed table
+
+import {useTheme} from "@table-library/react-table-library/theme";
 import {
 	Table,
 	Header,
@@ -12,7 +15,7 @@ import {
 import {useSort, HeaderCellSort} from "@table-library/react-table-library/sort";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchOrderByFilterAsync, selectAdminOrder} from "../adminOrderSlice";
-
+import {table_theme} from "./theme.js";
 import {format} from "date-fns";
 import OrderList from "../../order/components/OrderList";
 const OrderTable = () => {
@@ -29,9 +32,10 @@ const OrderTable = () => {
 		if (status !== "pending") {
 			dispatch(fetchOrderByFilterAsync(params));
 			console.log("dispatch", params);
-		} else {
-			console.log("not dispatched:", params, status);
 		}
+		// else {
+		// 	console.log("not dispatched:", params, status);
+		// }
 	}, [params, dispatch]);
 
 	const doGet = (params) => {
@@ -45,6 +49,7 @@ const OrderTable = () => {
 	}, [status]);
 
 	// features
+	const theme = useTheme(table_theme);
 
 	const sort = useSort(
 		data,
@@ -68,26 +73,28 @@ const OrderTable = () => {
 	}
 
 	return (
-		<Table data={data} sort={sort}>
+		<Table data={data} sort={sort} theme={theme}>
 			{(tableList) => (
 				<>
 					<Header>
 						<HeaderRow>
-							<HeaderCellSort sortKey="TASK">Task</HeaderCellSort>
-							<HeaderCellSort sortKey="DEADLINE">Deadline</HeaderCellSort>
-							<HeaderCellSort sortKey="TYPE">Type</HeaderCellSort>
+							<HeaderCellSort sortKey="id">Order Id</HeaderCellSort>
+							<HeaderCellSort sortKey="DEADLINE">Products</HeaderCellSort>
+							<HeaderCellSort sortKey="TYPE">User</HeaderCellSort>
 							<HeaderCellSort sortKey="status">Status</HeaderCellSort>
-							<HeaderCellSort sortKey="createdAt">TIME</HeaderCellSort>
+							<HeaderCellSort sortKey="createdAt">
+								Order Placement
+							</HeaderCellSort>
 						</HeaderRow>
 					</Header>
 
 					<Body>
 						{tableList.map((item) => (
 							<Row key={item.id} item={item}>
+								<Cell>{item.id}</Cell>
 								<Cell>
-									<OrderList ids={Object.keys(item.cart)} />
+									<OrderList ids={Object.keys(item.cart)} size={`w-12 h-12`} />
 								</Cell>
-								<Cell>{item.createdAt}</Cell>
 								<Cell>{item?.shippingAddress?.name}</Cell>
 								<Cell>{item.status}</Cell>
 								<Cell>{format(item.createdAt, "yyyy-MM-dd")}</Cell>
