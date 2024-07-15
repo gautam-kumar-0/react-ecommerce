@@ -1,7 +1,7 @@
 {
 	"products": [
 		{
-			"id": 7,
+			"id": 1,
 			"title": "Chanel Coco Noir Eau De",
 			"description": "Coco Noir by Chanel is an elegant and mysterious fragrance, featuring notes of grapefruit, rose, and sandalwood. Perfect for evening occasions.",
 			"category": "fragrances",
@@ -56,7 +56,7 @@
 			"thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/thumbnail.png"
 		},
 		{
-			"id": 8,
+			"id": 2,
 			"title": "Dior J'adore",
 			"description": "J'adore by Dior is a luxurious and floral fragrance, known for its blend of ylang-ylang, rose, and jasmine. It embodies femininity and sophistication.",
 			"category": "fragrances",
@@ -111,7 +111,7 @@
 			"thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/thumbnail.png"
 		},
 		{
-			"id": 9,
+			"id": 3,
 			"title": "Dolce Shine Eau de",
 			"description": "Dolce Shine by Dolce & Gabbana is a vibrant and fruity fragrance, featuring notes of mango, jasmine, and blonde woods. It's a joyful and youthful scent.",
 			"category": "fragrances",
@@ -166,7 +166,7 @@
 			"thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/thumbnail.png"
 		},
 		{
-			"id": 10,
+			"id": 4,
 			"title": "Gucci Bloom Eau de",
 			"description": "Gucci Bloom by Gucci is a floral and captivating fragrance, with notes of tuberose, jasmine, and Rangoon creeper. It's a modern and romantic scent.",
 			"category": "fragrances",
@@ -221,7 +221,7 @@
 			"thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/thumbnail.png"
 		},
 		{
-			"id": 11,
+			"id": 5,
 			"title": "Annibale Colombo Bed",
 			"description": "The Annibale Colombo Bed is a luxurious and elegant bed frame, crafted with high-quality materials for a comfortable and stylish bedroom.",
 			"category": "furniture",

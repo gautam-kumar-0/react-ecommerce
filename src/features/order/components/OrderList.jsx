@@ -17,7 +17,7 @@ const OrderList = ({ids, size}) => {
 						}}
 						key={i}
 					>
-						<OrderItem productId={id} />
+						<OrderItem productId={id} size={size} />
 					</div>
 				);
 			})}

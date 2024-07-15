@@ -19,12 +19,30 @@ const Checkout = () => {
 	const createOrder = (e) => {
 		e.preventDefault();
 		const order = {
-			cart,
 			userId: user.id,
 			shippingAddress: user.addresses[shippingAddress],
 			status: "pending",
 			createdAt: Date.now(),
+			items: {},
+			payment: {
+				total: 0,
+				items: products.length,
+
+				amountPayable: 0,
+			},
 		};
+
+		for (let p of products) {
+			const total = ((p.price * p.discountPercentage) / 100).toFixed(3);
+			order.items[p.id] = {
+				quantity: order[p.id],
+				price: p.price,
+				discountPercentage: p.discountPercentage,
+				total: ((p.price * p.discountPercentage) / 100).toFixed(3),
+			};
+			order.payment[total] += total;
+		}
+
 		dispatch(createOrderAsync(order));
 	};
 	const navigate = useNavigate();

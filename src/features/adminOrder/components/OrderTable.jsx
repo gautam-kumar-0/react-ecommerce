@@ -18,6 +18,7 @@ import {fetchOrderByFilterAsync, selectAdminOrder} from "../adminOrderSlice";
 import {table_theme} from "./theme.js";
 import {format} from "date-fns";
 import OrderList from "../../order/components/OrderList";
+import OrderItem from "../../order/components/OrderItem.jsx";
 const OrderTable = () => {
 	const [data, setData] = React.useState({
 		nodes: [],
@@ -93,7 +94,10 @@ const OrderTable = () => {
 							<Row key={item.id} item={item}>
 								<Cell>{item.id}</Cell>
 								<Cell>
-									<OrderList ids={Object.keys(item.cart)} size={`w-12 h-12`} />
+									<OrderItem
+										productId={Object.keys(item.cart)[0]}
+										size={"w-12 h-12"}
+									/>
 								</Cell>
 								<Cell>{item?.shippingAddress?.name}</Cell>
 								<Cell>{item.status}</Cell>

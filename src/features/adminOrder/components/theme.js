@@ -25,8 +25,9 @@ export const table_theme = {
     }
 
     &:not(:last-of-type) > .td {
-      border-bottom: 1px solid #92ade3;
+      border-bottom: 1px solid #000;
     }
+  
   `,
 	BaseCell: `
     padding: 6px 12px;
@@ -50,5 +51,11 @@ export const table_theme = {
       outline-width: 1px;
       outline-offset: -1px;
     }
+      &:first-child {
+      font-weight: bold;
+      }
+      &:first-child::before {
+       content : "#"
+      }
   `,
 };
