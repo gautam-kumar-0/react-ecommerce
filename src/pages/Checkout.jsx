@@ -27,7 +27,9 @@ const Checkout = () => {
 			payment: {
 				total: 0,
 				items: products.length,
-
+				tax: 2,
+				shippingCost: 0,
+				checkOutDiscountPercentage: 0,
 				amountPayable: 0,
 			},
 		};
@@ -42,7 +44,12 @@ const Checkout = () => {
 			};
 			order.payment[total] += total;
 		}
-
+		order.payment.shippingCost = Math.round(order.payment.total / 100);
+		order.payment.amountPayable = (
+			order.payment.shippingCost +
+			order.payment.total +
+			(order.payment.tax * order.payment.total) / 100
+		).toFixed(3);
 		dispatch(createOrderAsync(order));
 	};
 	const navigate = useNavigate();

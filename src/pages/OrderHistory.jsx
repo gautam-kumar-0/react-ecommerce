@@ -39,7 +39,7 @@ const OrderHistory = () => {
 							</div>
 
 							<div className="p-5">
-								<OrderList ids={Object.keys(order.cart)} />
+								<OrderList ids={Object.keys(order.items)} />
 							</div>
 						</div>
 					</div>
