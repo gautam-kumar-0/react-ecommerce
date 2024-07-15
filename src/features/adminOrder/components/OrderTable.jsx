@@ -95,7 +95,7 @@ const OrderTable = () => {
 								<Cell>{item.id}</Cell>
 								<Cell>
 									<OrderItem
-										productId={Object.keys(item.cart)[0]}
+										productId={Object.keys(item.items)[0]}
 										size={"w-12 h-12"}
 									/>
 								</Cell>

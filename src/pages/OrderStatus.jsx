@@ -19,7 +19,7 @@ const OrderStatus = () => {
 	useEffect(() => {
 		dispatch(fetchOrderByIdAsync(orderId));
 	}, []);
-	if (order.cart) productsIds = Object.keys(order.cart);
+	if (order.items) productsIds = Object.keys(order.items);
 	const products = useSelector((state) => getProductByIds(state, productsIds));
 	if (!products || !order?.id) return <BarLoader />;
 
@@ -48,7 +48,7 @@ const OrderStatus = () => {
 										<span className="font-semibold">{p.title}</span>
 										<span className="float-right text-gray-400">{p.brand}</span>
 										<p className="text-lg font-bold">
-											${p.price * order.cart[p.id]}
+											${p.price * order.items[p.id].quantity}
 										</p>
 									</div>
 								</div>
@@ -89,7 +89,7 @@ const OrderStatus = () => {
 				<div className="px-4 mt-10 bg-gray-50 lg:mt-0">
 					<div className="">
 						{/*Total*/}
-						<OrderInfo products={products} cart={order.cart} />
+						<OrderInfo products={products} cart={order.items} />
 					</div>
 				</div>
 			</form>
