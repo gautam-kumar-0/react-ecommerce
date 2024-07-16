@@ -28,7 +28,7 @@ const ProductCard2 = ({product, className}) => {
 					<Rating rating={product.rating} key={product.rating * 2} />
 					<span className="text-2xl font-semibold ">
 						<span className="mr-1 font-light font-jose bg-none text-emerald-400">
-							$
+							₹
 						</span>
 						{product.price}
 					</span>

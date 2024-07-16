@@ -37,14 +37,15 @@ const Checkout = () => {
 		for (let p of products) {
 			const total = ((p.price * p.discountPercentage) / 100).toFixed(3);
 			order.items[p.id] = {
-				quantity: order[p.id],
+				quantity: cart[p.id],
 				price: p.price,
 				discountPercentage: p.discountPercentage,
 				total: ((p.price * p.discountPercentage) / 100).toFixed(3),
 			};
-			order.payment[total] += total;
+			order.payment.total += Number(total);
 		}
 		order.payment.shippingCost = Math.round(order.payment.total / 100);
+		console.log(order);
 		order.payment.amountPayable = (
 			order.payment.shippingCost +
 			order.payment.total +

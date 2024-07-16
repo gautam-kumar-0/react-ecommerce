@@ -1,7 +1,7 @@
 import logo from "../assests/img/logo.png";
 
 import Button1 from "../components/Button1";
-import {useEffect, useState} from "react";
+import {useEffect, useLayoutEffect, useState} from "react";
 
 import {Link, useLocation, useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
@@ -32,7 +32,7 @@ const Login = () => {
 		setPassword("");
 	}
 	const navigate = useNavigate();
-	useEffect(() => {
+	useLayoutEffect(() => {
 		if (userId) navigate(location?.state?.from || "/user");
 	}, [userId]);
 	return (

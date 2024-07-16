@@ -6,8 +6,8 @@ import useIntersection from "../hooks/useIntersection";
 
 const Carousel = () => {
 	const images = [
-		"https://i.dummyjson.com/data/products/2/1.jpg",
-		"https://i.dummyjson.com/data/products/5/2.jpg",
+		"https://cdn.dummyjson.com/products/images/groceries/Apple/1.png",
+		"https://cdn.dummyjson.com/products/images/groceries/Green%20Bell%20Pepper/1.png",
 		"https://i.dummyjson.com/data/products/6/3.jpg",
 		"https://i.dummyjson.com/data/products/1/thumbnail.jpg",
 	];

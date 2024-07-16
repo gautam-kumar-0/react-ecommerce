@@ -1,40 +1,55 @@
 export const table_theme = {
-	Table: "",
+	Table: `
+  margin:1rem;
+  padding: 4px;
+  border-radius: .5rem;
+  background-color: #1c2533;
+  
+  `,
 
 	Header: `
-    font-size: 17px
+    font-size: 16px
     font-weight: bold
     
     `,
 	Body: "",
 	BaseRow: `
-    font-size: 16px;
+    font-size: 14px;
+     
+
   `,
 	HeaderRow: `
-    color: #9549ff;
+    color: #b856ff;
+    & > .th {
+    border-bottom: 2px solid #1d102a;
+    padding: 8px 4px;
+    }
+    
   `,
 	Row: `
-    color: #131313;
-
+    color: #eee;
+   
     &.disabled {
-      color: #303030;
+      color: #aaa;
     }
 
-    &:hover {
-      color: "#000000";
-    }
-
-    &:not(:last-of-type) > .td {
-      border-bottom: 1px solid #000;
+    &:not(:last-of-type)  > .td {
+      border-bottom: 2px solid #1d102a;
+     
     }
   
   `,
 	BaseCell: `
-    padding: 6px 12px;
+    padding: 4px 8px;
+
+    background-color: #1c2533;
+    display:grid;
+    place-items:center;
+   
   `,
 	HeaderCell: `
     font-weight: bold;
-    border-bottom: 1px solid #131313;
+  
 
     .resizer-handle {
       background-color: #131313;
@@ -46,6 +61,7 @@ export const table_theme = {
     }
   `,
 	Cell: `
+  
     &:focus {
       outline: dotted;
       outline-width: 1px;
@@ -53,9 +69,8 @@ export const table_theme = {
     }
       &:first-child {
       font-weight: bold;
+      
       }
-      &:first-child::before {
-       content : "#"
-      }
+     
   `,
 };

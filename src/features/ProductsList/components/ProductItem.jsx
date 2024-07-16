@@ -52,7 +52,7 @@ const ProductItem = () => {
 							).toFixed(2)}
 						</span>
 						<span className="text-xl font-medium line-through">
-							$ {product.price}
+							₹ {product.price}
 						</span>
 						<span className="text-xl text-green-500">
 							{product.discountPercentage}% off.

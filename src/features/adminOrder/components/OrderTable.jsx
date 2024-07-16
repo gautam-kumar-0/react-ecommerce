@@ -19,6 +19,7 @@ import {table_theme} from "./theme.js";
 import {format} from "date-fns";
 import OrderList from "../../order/components/OrderList";
 import OrderItem from "../../order/components/OrderItem.jsx";
+import {TbEdit, TbEye} from "react-icons/tb";
 const OrderTable = () => {
 	const [data, setData] = React.useState({
 		nodes: [],
@@ -86,13 +87,15 @@ const OrderTable = () => {
 							<HeaderCellSort sortKey="createdAt">
 								Order Placement
 							</HeaderCellSort>
+
+							<HeaderCell>Actions</HeaderCell>
 						</HeaderRow>
 					</Header>
 
 					<Body>
 						{tableList.map((item) => (
 							<Row key={item.id} item={item}>
-								<Cell>{item.id}</Cell>
+								<Cell>#{item.id}</Cell>
 								<Cell>
 									<OrderItem
 										productId={Object.keys(item.items)[0]}
@@ -101,7 +104,17 @@ const OrderTable = () => {
 								</Cell>
 								<Cell>{item?.shippingAddress?.name}</Cell>
 								<Cell>{item.status}</Cell>
-								<Cell>{format(item.createdAt, "yyyy-MM-dd")}</Cell>
+								<Cell>
+									<div className="flex flex-col">
+										<span>{format(item.createdAt, "yyyy-MM-dd")}</span>
+										<span className="text-xs ">
+											{format(item.createdAt, "hh:mm:ss")}
+										</span>
+									</div>
+								</Cell>
+								<Cell>
+									<TbEye /> <TbEdit />
+								</Cell>
 							</Row>
 						))}
 					</Body>

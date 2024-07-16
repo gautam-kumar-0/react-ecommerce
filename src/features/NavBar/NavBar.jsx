@@ -9,7 +9,7 @@ import {selectWish} from "../wishlist/wishListSlice";
 import useUser from "../../hooks/useUser";
 
 const StyledItem = ({children, to, className, activeClass}) => {
-	const styles = `text-gray-700  dark:text-gray-200 border-b-2 border-transparent hover:border-violet-500 bg-white/50  dark:border dark:bg-transparent dark:border-gray-900 backdrop-blur-sm dark:hover:bg-violet-700  active:shadow-none transition font-thin font-geo px-3  ${className}`;
+	const styles = `text-gray-700  dark:text-gray-200 border-b-2 border-transparent hover:text-violet-500 bg-white/50  dark:border dark:bg-transparent dark:border-gray-900 backdrop-blur-sm dark:hover:bg-violet-700  active:shadow-none transition font-semibold font-geo px-3  ${className}`;
 	return (
 		<NavLink
 			className={({isActive}) =>
@@ -35,7 +35,7 @@ const NavBar = () => {
 	const wishlist = Object.keys(useSelector(selectWish)).length;
 	const user = useUser();
 	return (
-		<header className="z-50 flex flex-wrap items-stretch justify-between mb-12 overflow-hidden bg-white lg:mb-0 lg:flex-nowrap md:py-0 lg:justify-start text-lg/loose backdrop-blur-md dark:bg-black ">
+		<header className="z-50 flex flex-wrap items-stretch justify-between mb-12 overflow-hidden bg-white lg:mb-0 lg:flex-nowrap md:py-0 lg:justify-start text-base/loose backdrop-blur-md dark:bg-black ">
 			<div className="flex order-1 my-1 ml-3">
 				<img src={logo} className="size-12 " alt="Logo" />
 				<div className="flex flex-col justify-center leading-[16px]  font-medium bg-clip-text text-transparent bg-gradient-to-r from-violet-700 to-violet-500 font-jose text-lg ">
@@ -75,7 +75,7 @@ const NavBar = () => {
 							<div className="" key={i}>
 								<StyledItem
 									className="hidden md:inline-block "
-									activeClass={"!border-violet-500 "}
+									activeClass={"!text-violet-500 "}
 									to={nav.to}
 								>
 									{nav.name}
