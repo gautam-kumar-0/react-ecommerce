@@ -11,7 +11,7 @@ const WishItem = ({productId}) => {
 	return (
 		<div className="flex flex-wrap  gap-2 p-2 pt-4 overflow-hidden bg-white shadow-sm border  max-w-[600px] rounded-xl font-geo ring-0.5 ring-violet-400">
 			<h2 className="px-2 text-2xl font-light text-gray-600 basis-full line-clamp-1">
-				{product.title}
+				{product?.title}
 			</h2>
 
 			<div className="flex justify-between gap-4 p-2 md:basis-2/3">
@@ -28,7 +28,7 @@ const WishItem = ({productId}) => {
 						Category: <span className="text-gray-600">{product.category}</span>
 					</p>
 					<p className="flex-grow mt-1 font-extralight line-clamp-3">
-						{product.description}{" "}
+						{product.description}
 					</p>
 				</div>
 			</div>

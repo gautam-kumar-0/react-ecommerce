@@ -80,9 +80,9 @@ const OrderTable = () => {
 				<>
 					<Header>
 						<HeaderRow>
-							<HeaderCellSort sortKey="id">Order Id</HeaderCellSort>
-							<HeaderCellSort sortKey="DEADLINE">Products</HeaderCellSort>
-							<HeaderCellSort sortKey="TYPE">User</HeaderCellSort>
+							<HeaderCell>Order Id</HeaderCell>
+							<HeaderCellSort sortKey="itmes">Product</HeaderCellSort>
+							<HeaderCellSort sortKey="user">User</HeaderCellSort>
 							<HeaderCellSort sortKey="status">Status</HeaderCellSort>
 							<HeaderCellSort sortKey="createdAt">
 								Order Placement
@@ -102,8 +102,8 @@ const OrderTable = () => {
 										size={"w-12 h-12"}
 									/>
 								</Cell>
-								<Cell>{item?.shippingAddress?.name}</Cell>
-								<Cell>{item.status}</Cell>
+								<Cell>{item?.shippingAddress?.email}</Cell>
+								<Cell className="capitalize">{item.status}</Cell>
 								<Cell>
 									<div className="flex flex-col">
 										<span>{format(item.createdAt, "yyyy-MM-dd")}</span>
@@ -113,7 +113,9 @@ const OrderTable = () => {
 									</div>
 								</Cell>
 								<Cell>
-									<TbEye /> <TbEdit />
+									<div className="flex gap-4 text-2xl ">
+										<TbEye /> <TbEdit />
+									</div>
 								</Cell>
 							</Row>
 						))}

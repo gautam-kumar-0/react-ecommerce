@@ -9,7 +9,7 @@ import {selectWish} from "../wishlist/wishListSlice";
 import useUser from "../../hooks/useUser";
 
 const StyledItem = ({children, to, className, activeClass}) => {
-	const styles = `text-gray-700  dark:text-gray-200 border-b-2 border-transparent hover:text-violet-500 bg-white/50  dark:border dark:bg-transparent dark:border-gray-900 backdrop-blur-sm dark:hover:bg-violet-700  active:shadow-none transition font-semibold font-geo px-3  ${className}`;
+	const styles = `text-gray-700  dark:text-gray-200 border-b-2 border-transparent hover:text-violet-500 bg-white/50  dark:border dark:bg-transparent dark:border-gray-900 backdrop-blur-sm dark:hover:bg-violet-700  active:shadow-none transition font-medium  font-geo px-3  ${className}`;
 	return (
 		<NavLink
 			className={({isActive}) =>

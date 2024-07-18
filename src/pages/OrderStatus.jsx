@@ -1,13 +1,12 @@
 import React, {useEffect} from "react";
-import {Link, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchOrderByIdAsync} from "../features/order/orderSlice";
-import OrderList from "../features/order/components/OrderList";
 import {BarLoader} from "react-spinners";
 
 import {LuBuilding2, LuHome} from "react-icons/lu";
 import {getProductByIds} from "../features/ProductsList/productListSlice";
-import OrderInfo from "../features/order/components/OrderInfo";
+import OrderInfoOld from "../features/order/components/OrderInfoOld";
 
 const OrderStatus = () => {
 	const dispatch = useDispatch();
@@ -89,7 +88,7 @@ const OrderStatus = () => {
 				<div className="px-4 mt-10 bg-gray-50 lg:mt-0">
 					<div className="">
 						{/*Total*/}
-						<OrderInfo products={products} cart={order.items} />
+						<OrderInfoOld products={products} cart={order.items} />
 					</div>
 				</div>
 			</form>
