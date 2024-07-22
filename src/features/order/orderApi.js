@@ -1,7 +1,7 @@
 export function fetchOrderByUser(userId) {
 	return new Promise(async (resolve) => {
 		const response = await fetch(
-			`http://localhost:4000/orders?userId=${userId}`
+			`http://localhost:4001/orders?userId=${userId}`
 		);
 		const data = await response.json();
 		resolve({data});
@@ -9,14 +9,14 @@ export function fetchOrderByUser(userId) {
 }
 export function fetchOrderById(orderId) {
 	return new Promise(async (resolve) => {
-		const response = await fetch(`http://localhost:4000/orders/${orderId}`);
+		const response = await fetch(`http://localhost:4001/orders/${orderId}`);
 		const data = await response.json();
 		resolve(data);
 	});
 }
 export function createOrder(order) {
 	return new Promise(async (resolve) => {
-		const response = await fetch("http://localhost:4000/orders", {
+		const response = await fetch("http://localhost:4001/orders", {
 			method: "POST",
 			body: JSON.stringify(order),
 			headers: {"content-type": "application/json"},
@@ -30,7 +30,7 @@ export function cancelOrder(orderId) {
 	return new Promise(async (resolve, reject) => {
 		const order = fetchOrderById(orderId);
 		if (order) {
-			const response = await fetch(`http://localhost:4000/orders/${orderId}`, {
+			const response = await fetch(`http://localhost:4001/orders/${orderId}`, {
 				method: "PATCH",
 				body: JSON.stringify({...order, status: "cancelled"}),
 				headers: {"content-type": "application/json"},

@@ -1,6 +1,6 @@
 export function addProduct(product) {
 	return new Promise(async (resolve) => {
-		const response = await fetch(`http://localhost:4000/products`, {
+		const response = await fetch(`http://localhost:4001/products`, {
 			method: "POST",
 			body: JSON.stringify(product),
 			headers: {"content-type": "application/json"},
@@ -13,7 +13,7 @@ export function addProduct(product) {
 export function updateProduct(product) {
 	return new Promise(async (resolve) => {
 		const response = await fetch(
-			`http://localhost:4000/products/${product.id}`,
+			`http://localhost:4001/products/${product.id}`,
 			{
 				method: "PATCH",
 				body: JSON.stringify(product),
@@ -28,7 +28,7 @@ export function updateProduct(product) {
 export function deleteProduct(productId) {
 	return new Promise(async (resolve) => {
 		const response = await fetch(
-			`http://localhost:4000/products/${productId}`,
+			`http://localhost:4001/products/${productId}`,
 			{
 				method: "PATCH",
 				body: JSON.stringify({deleted: true}),

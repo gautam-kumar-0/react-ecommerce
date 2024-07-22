@@ -1,6 +1,6 @@
 export function createUser(user) {
 	return new Promise(async (resolve) => {
-		const response = await fetch("http://localhost:4000/users", {
+		const response = await fetch("http://localhost:4001/users", {
 			method: "POST",
 			body: JSON.stringify(user),
 			headers: {"content-type": "application/json"},
@@ -13,7 +13,7 @@ export function createUser(user) {
 export function checkUser(user) {
 	return new Promise(async (resolve, reject) => {
 		const response = await fetch(
-			`http://localhost:4000/users?email=${user.email}`
+			`http://localhost:4001/users?email=${user.email}`
 		);
 		const data = await response.json();
 		if (data.length) {
