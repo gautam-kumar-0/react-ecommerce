@@ -6,7 +6,7 @@ import useUser from "../hooks/useUser";
 import {BarLoader} from "react-spinners";
 
 const User = () => {
-	let user = useUser();
+	let user = useUser("User");
 	if (!user) return <BarLoader />;
 	return (
 		<div className="p-4 ">

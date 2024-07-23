@@ -13,7 +13,8 @@ import useUser from "../../../hooks/useUser";
 
 const ProductCard = ({product}) => {
 	const wishlist = useSelector((state) => selectWishById(state, product.id));
-	const user = useUser();
+	const user = useUser("Product");
+	//TODO calling user inside card for dispatch function make the function call to many times we can create a transform response like to add user after dispatch
 	const dispatch = useDispatch();
 	const cart = useSelector(selectCart);
 	const location = useLocation();

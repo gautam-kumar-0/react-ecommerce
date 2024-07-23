@@ -13,7 +13,7 @@ const Checkout = () => {
 	const [showAddForm, setShowAddForm] = useState(false);
 	const [shippingAddress, setShippingAddress] = useState(0);
 	const [showError, setShowError] = useState(false);
-	let user = useUser();
+	let user = useUser("Checkout");
 	const dispatch = useDispatch();
 	const order = useSelector(selectOrderState);
 	const createOrder = (e) => {

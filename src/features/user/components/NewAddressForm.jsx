@@ -6,7 +6,7 @@ import {updateUserAsync} from "../userSlice";
 import useUser from "../../../hooks/useUser";
 
 const NewAddressForm = ({show, setShow}) => {
-	const user = useUser();
+	const user = useUser("NewAddressForm");
 	const toggleShow = () => setShow(!show);
 	const dispatch = useDispatch();
 

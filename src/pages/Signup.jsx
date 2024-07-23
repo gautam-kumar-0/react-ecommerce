@@ -14,7 +14,7 @@ const Signup = () => {
 	const [remember, setRemember] = useState(false);
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
-	const user = useUser();
+	const user = useUser("Signup");
 	const onNameChange = (e) => {
 		setName(e.target.value);
 	};

@@ -4,7 +4,7 @@ import useUser from "../../../hooks/useUser";
 import NewAddressForm from "./NewAddressForm";
 import {EditAddressForm} from "./EditAddressForm";
 const AddressPage = () => {
-	const user = useUser();
+	const user = useUser("AddressPage");
 	const [defaultAddress, setDefaultAddress] = useState({});
 	const [showNewForm, setShowNewForm] = useState(false);
 	const [showEditForm, setShowEditForm] = useState(false);

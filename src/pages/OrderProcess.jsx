@@ -10,7 +10,7 @@ import useUser from "../hooks/useUser";
 
 const OrderProcess = () => {
 	const {orders, currentOrder, status, error} = useOrder();
-	const user = useUser();
+	const user = useUser("OrderProcess");
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 	useEffect(() => {

@@ -33,7 +33,7 @@ const NavBar = () => {
 	const [showMenu, setShowMenu] = useState(true);
 	const cart = Object.keys(useSelector(selectCart)).length;
 	const wishlist = Object.keys(useSelector(selectWish)).length;
-	const user = useUser();
+	const user = useUser("NavBar");
 	return (
 		<header className="z-50 flex flex-wrap items-stretch justify-between mb-12 overflow-hidden bg-white lg:mb-0 lg:flex-nowrap md:py-0 lg:justify-start text-base/loose backdrop-blur-md dark:bg-black ">
 			<div className="flex order-1 my-1 ml-3">

@@ -6,14 +6,7 @@ import {
 	fetchProductsByFilterAsync,
 	selectPagination,
 } from "../features/ProductsList/productListSlice";
-import {
-	LuChevronLeft,
-	LuChevronRight,
-	LuFilter,
-	LuMenu,
-	LuMenuSquare,
-	LuOption,
-} from "react-icons/lu";
+import {LuChevronLeft, LuChevronRight, LuMenu} from "react-icons/lu";
 
 const PageBtn = ({page, setPage, children}) => {
 	return (
@@ -51,7 +44,7 @@ const Products = ({productList}) => {
 	const [filter, setFilter] = useState(initialFilter);
 	const [sort, setSort] = useState(initialSort);
 
-	const {first, items, last, next, pages, prev} = useSelector(selectPagination);
+	const {next, prev} = useSelector(selectPagination);
 
 	const [page, setPage] = useState(1);
 

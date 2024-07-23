@@ -12,7 +12,7 @@ const OrderHistory = () => {
 	const {orders} = useOrder();
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
-	const user = useUser();
+	const user = useUser("OrderHistory");
 	useEffect(() => {
 		dispatch(fetchOrderByUserAsync(user.id));
 	}, [dispatch, user.id]);

@@ -4,7 +4,7 @@ import {BarLoader} from "react-spinners";
 import {TiUser} from "react-icons/ti";
 
 const Profile = () => {
-	let user = useUser();
+	let user = useUser("Profile");
 	if (!user) return <BarLoader />;
 	return (
 		<div className="p-4 ">

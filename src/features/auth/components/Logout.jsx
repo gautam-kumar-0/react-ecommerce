@@ -6,7 +6,7 @@ import {Navigate} from "react-router-dom";
 
 const Logout = () => {
 	const dispatch = useDispatch();
-	const user = useUser();
+	const user = useUser("Logout");
 
 	useEffect(() => {
 		dispatch(resetUser());

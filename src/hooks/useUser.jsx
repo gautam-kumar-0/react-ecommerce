@@ -7,12 +7,12 @@ import {
 } from "../features/user/userSlice";
 import {selectUserId} from "../features/auth/authSlice";
 
-const useUser = () => {
+const useUser = (c) => {
 	const dispatch = useDispatch();
 	const userId = useSelector(selectUserId);
 	const user = useSelector(selectUser);
 	useEffect(() => {
-		console.log("useUser:", userId);
+		console.log("useUser:", userId, c);
 		let promise = null;
 		if (userId) {
 			promise = dispatch(fetchUserAsync(userId));
@@ -20,7 +20,7 @@ const useUser = () => {
 		return () => {
 			if (promise) promise.abort();
 		};
-	}, [dispatch, userId]);
+	}, [userId]);
 
 	return user;
 };
