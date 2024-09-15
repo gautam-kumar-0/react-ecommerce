@@ -8,7 +8,7 @@ export function fetchOrderByFilter(params) {
 			queryString += `_sort=${order}${params.sort.sortKey}`;
 		}
 		console.log("QueryString", queryString);
-		const response = await fetch(`http://localhost:4001/orders${queryString}`);
+		const response = await fetch(`http://localhost:4000/orders${queryString}`);
 
 		const data = await response.json();
 		console.log(data, response);
@@ -17,7 +17,7 @@ export function fetchOrderByFilter(params) {
 }
 export function updateOrderById(params) {
 	return new Promise(async (resolve) => {
-		const response = await fetch(`http://localhost:4001/orders${params.id}`, {
+		const response = await fetch(`http://localhost:4000/orders${params.id}`, {
 			method: "PATCH",
 			body: JSON.stringify({...params}),
 			"content-type": "application/json",

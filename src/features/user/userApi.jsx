@@ -1,6 +1,6 @@
 export function fetchUserDetails(userId) {
 	return new Promise(async (resolve, reject) => {
-		const response = await fetch(`http://localhost:4001/users/${userId}`);
+		const response = await fetch(`http://localhost:4000/users/${userId}`);
 		const data = await response.json();
 		resolve({data});
 	});
@@ -9,7 +9,7 @@ export function fetchUserDetails(userId) {
 export function updateUser({update, user}) {
 	return new Promise(async (resolve, reject) => {
 		const response = await fetch(
-			`http://localhost:4001/users?email=${user.email}`
+			`http://localhost:4000/users?email=${user.email}`
 		);
 		const data = await response.json();
 
@@ -18,7 +18,7 @@ export function updateUser({update, user}) {
 			for (let key in update) {
 				newUser[key] = update[key];
 			}
-			const res = await fetch(`http://localhost:4001/users/${data[0].id}`, {
+			const res = await fetch(`http://localhost:4000/users/${data[0].id}`, {
 				method: "PATCH",
 				body: JSON.stringify(newUser),
 				header: {"content-type": "application/json"},
