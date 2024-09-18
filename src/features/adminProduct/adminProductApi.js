@@ -21,7 +21,8 @@ export function updateProduct(product) {
 			}
 		);
 		const data = await response.json();
-		resolve({data});
+		console.log("Payload Check Update: ", data);
+		resolve({data: data.updatedProduct});
 	});
 }
 

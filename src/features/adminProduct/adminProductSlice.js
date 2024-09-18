@@ -25,7 +25,7 @@ export const deleteProductsAsync = createAsyncThunk(
 );
 
 const initialState = {
-	product: {},
+	product: "",
 	error: null,
 	status: "idle", //| "pending" | "rejected" | "fulfilled",
 };
@@ -45,8 +45,9 @@ export const adminProduct = createSlice({
 				state.error = action.error;
 			})
 			.addCase(addProductsAsync.fulfilled, (state, action) => {
+				console.log("Admin Product Builder Case: ", action.payload);
+				state.product = action.payload._id;
 				state.status = "fulfilled";
-				state.product = action.payload;
 			})
 			.addCase(updateProductsAsync.pending, (state, action) => {
 				state.status = "pending";
@@ -56,8 +57,9 @@ export const adminProduct = createSlice({
 				state.error = action.error;
 			})
 			.addCase(updateProductsAsync.fulfilled, (state, action) => {
+				state.product = action.payload?.id;
+				console.log("Admin Product Builder Case: ", action.payload);
 				state.status = "fulfilled";
-				state.product = action.payload;
 			})
 			.addCase(deleteProductsAsync.pending, (state, action) => {
 				state.status = "pending";

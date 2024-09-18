@@ -21,9 +21,8 @@ const AdminProductForm = ({onSubmit, values, resetName}) => {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		if (status === "fulfilled") {
-			console.log(product);
-			navigate(`/admin/product/${product.id}`, {replace: false});
+		if (status === "fulfilled" && product) {
+			navigate(`/admin/product/${product}`, {replace: false});
 		} else if (status === "rejected") {
 			setError(error);
 			console.log(error);
@@ -34,9 +33,9 @@ const AdminProductForm = ({onSubmit, values, resetName}) => {
 			clearErrors();
 		}
 		return () => {
-			dispatch(resetAdminProduct());
+			if (status === "fulfilled") dispatch(resetAdminProduct());
 		};
-	}, [status, navigate]);
+	}, [product, status, navigate]);
 
 	return (
 		<section className="flex justify-center p-4 text-lg font-geo">
