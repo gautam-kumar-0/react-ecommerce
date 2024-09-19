@@ -17,12 +17,16 @@ const AdminProductForm = ({onSubmit, values, resetName}) => {
 	} = useForm({values});
 	const [show, setShow] = useState(false);
 	const dispatch = useDispatch();
-	const {product, status, error} = useSelector((state) => state.adminProduct);
+	const {
+		product: productId,
+		status,
+		error,
+	} = useSelector((state) => state.adminProduct);
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		if (status === "fulfilled" && product) {
-			navigate(`/admin/product/${product}`, {replace: false});
+		if (status === "fulfilled" && productId) {
+			navigate(`/admin/product/${productId}`, {replace: false});
 		} else if (status === "rejected") {
 			setError(error);
 			console.log(error);
@@ -35,7 +39,7 @@ const AdminProductForm = ({onSubmit, values, resetName}) => {
 		return () => {
 			if (status === "fulfilled") dispatch(resetAdminProduct());
 		};
-	}, [product, status, navigate]);
+	}, [productId, status, navigate]);
 
 	return (
 		<section className="flex justify-center p-4 text-lg font-geo">
@@ -101,8 +105,8 @@ const AdminProductForm = ({onSubmit, values, resetName}) => {
 						<span>Discount</span>
 						<input
 							type="number"
-							id="discount"
-							{...register("discount", {required: true, min: 0})}
+							id="discountPercentage"
+							{...register("discountPercentage", {required: true, min: 0})}
 							className="p-1 text-gray-800 border-2 border-gray-300 basis-1/2 focus:outline-none "
 						/>
 					</label>

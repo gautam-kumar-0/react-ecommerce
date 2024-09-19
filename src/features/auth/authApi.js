@@ -1,6 +1,6 @@
 export function createUser(user) {
 	return new Promise(async (resolve) => {
-		const response = await fetch("http://localhost:4000/users", {
+		const response = await fetch("http://localhost:4000/users/register", {
 			method: "POST",
 			body: JSON.stringify(user),
 			headers: {"content-type": "application/json"},
@@ -12,20 +12,8 @@ export function createUser(user) {
 
 export function checkUser(user) {
 	return new Promise(async (resolve, reject) => {
-		const response = await fetch(
-			`http://localhost:4000/users?email=${user.email}`
-		);
+		const response = await fetch(`http://localhost:4000/login`);
 		const data = await response.json();
-		if (data.length) {
-			if (data[0].password === user.password) {
-				let loggedUser = data[0];
-				delete loggedUser.password;
-				resolve({data: loggedUser});
-			} else {
-				reject({message: "password doesn't match."});
-			}
-		} else {
-			reject({message: "Email and password doesn't match."});
-		}
+		resolve({data});
 	});
 }

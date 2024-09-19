@@ -143,15 +143,15 @@ function App() {
 			),
 		},
 		{
-			path: "/admin/new",
+			path: "admin/products/new",
 			element: <AdminAddProduct />,
 		},
 		{
-			path: "/admin/product/:productId",
+			path: "/admin/products/:productId",
 			element: <ProductItemAdmin />,
 		},
 		{
-			path: "/admin/product/edit/:productId",
+			path: "/admin/products/edit/:productId",
 			element: <AdminProductEdit />,
 		},
 		{

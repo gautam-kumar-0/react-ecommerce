@@ -7,7 +7,8 @@ import {createUserAsync, selectUser} from "../features/auth/authSlice";
 import {useNavigate} from "react-router-dom";
 import useUser from "../hooks/useUser";
 const Signup = () => {
-	const [name, setName] = useState("");
+	const [fname, setFname] = useState("");
+	const [lname, setLname] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [confirm, setConfirm] = useState("");
@@ -15,8 +16,12 @@ const Signup = () => {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 	const user = useUser("Signup");
-	const onNameChange = (e) => {
-		setName(e.target.value);
+	const onFnameChange = (e) => {
+		setFname(e.target.value);
+	};
+
+	const onLnameChange = (e) => {
+		setLname(e.target.value);
 	};
 	const onEmailChange = (e) => {
 		setEmail(e.target.value);
@@ -32,7 +37,9 @@ const Signup = () => {
 	};
 	const onFormSubmit = (e) => {
 		e.preventDefault();
-		dispatch(createUserAsync({name, email, password}));
+		dispatch(
+			createUserAsync({firstName: fname, lastName: lname, email, password})
+		);
 	};
 	useEffect(() => {
 		if (user.email) {
@@ -56,24 +63,43 @@ const Signup = () => {
 
 				<label htmlFor="name" className="flex flex-col gap-1">
 					<span className="p-0.5 text-lg font-medium text-gray-500 dark:text-gray-300 ">
-						Full Name
+						First Name
 					</span>
 					<input
 						type="text"
 						id="name"
-						value={name}
-						onChange={onNameChange}
+						value={fname}
+						onChange={onFnameChange}
 						className=" block px-3 py-2 text-lg border-2  dark:border-gray-600 rounded-sm focus:outline-none bg-transparent focus:bg-indigo-200/10 focus:border-indigo-500 min-w-48 sm:min-w-64 lg:min-w-72 [&:not(:placeholder-shown):not(:focus):invalid~span]:visible invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-400 invalid:[&:not(:placeholder-shown):not(:focus)]:bg-red-200/10 valid:[&:not(:placeholder-shown)]:border-green-500  valid:[&:not(:placeholder-shown)]:bg-green-200/10"
 						autoComplete="off"
 						placeholder="Full Name"
 						required
-						pattern="[0-9a-zA-Z ]{6,}"
+						pattern="[0-9a-zA-Z ]{3,}"
 					/>
 					<span className="invisible text-sm text-red-400 ">
-						Enter a valid full name.
+						Enter a valid first name.
 					</span>
 				</label>
 
+				<label htmlFor="name" className="flex flex-col gap-1">
+					<span className="p-0.5 text-lg font-medium text-gray-500 dark:text-gray-300 ">
+						Last Name
+					</span>
+					<input
+						type="text"
+						id="name"
+						value={lname}
+						onChange={onLnameChange}
+						className=" block px-3 py-2 text-lg border-2  dark:border-gray-600 rounded-sm focus:outline-none bg-transparent focus:bg-indigo-200/10 focus:border-indigo-500 min-w-48 sm:min-w-64 lg:min-w-72 [&:not(:placeholder-shown):not(:focus):invalid~span]:visible invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-400 invalid:[&:not(:placeholder-shown):not(:focus)]:bg-red-200/10 valid:[&:not(:placeholder-shown)]:border-green-500  valid:[&:not(:placeholder-shown)]:bg-green-200/10"
+						autoComplete="off"
+						placeholder="Full Name"
+						required
+						pattern="[0-9a-zA-Z ]{3,}"
+					/>
+					<span className="invisible text-sm text-red-400 ">
+						Enter a valid last name.
+					</span>
+				</label>
 				<label htmlFor="email" className="flex flex-col gap-1">
 					<span className="p-0.5 text-lg font-medium text-gray-500 dark:text-gray-300 ">
 						Email
