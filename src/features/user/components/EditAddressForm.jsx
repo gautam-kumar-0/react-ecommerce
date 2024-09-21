@@ -10,7 +10,7 @@ export const EditAddressForm = ({show, setShow, index, address}) => {
 		setShow(!show);
 	};
 	const dispatch = useDispatch();
-	const userId = useAuth();
+	const userId = useAuth().id;
 	const addAddress = (e) => {
 		e.preventDefault();
 		const newAddress = {

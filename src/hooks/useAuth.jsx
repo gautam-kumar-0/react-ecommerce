@@ -1,9 +1,8 @@
 import {useSelector} from "react-redux";
-import {selectUserId} from "../features/auth/authSlice";
-
+import {selectAuth} from "../features/auth/authSlice";
+import {jwtDecode} from "jwt-decode";
 const useAuth = () => {
-	const id = useSelector(selectUserId);
-	return id;
+	return jwtDecode(useSelector(selectAuth));
 };
 
 export default useAuth;

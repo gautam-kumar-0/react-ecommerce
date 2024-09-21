@@ -5,11 +5,10 @@ import {
 	fetchUserAsync,
 	selectUser,
 } from "../features/user/userSlice";
-import {selectUserId} from "../features/auth/authSlice";
-
+import useAuth from "./useAuth";
 const useUser = (c) => {
 	const dispatch = useDispatch();
-	const userId = useSelector(selectUserId);
+	const userId = useAuth().id;
 	const user = useSelector(selectUser);
 	useEffect(() => {
 		console.log("useUser:", userId, c);

@@ -5,7 +5,7 @@ import Button1 from "../components/Button1";
 import {useEffect, useState} from "react";
 import {createUserAsync, selectUser} from "../features/auth/authSlice";
 import {useNavigate} from "react-router-dom";
-import useUser from "../hooks/useUser";
+import useAuth from "../hooks/useAuth";
 const Signup = () => {
 	const [fname, setFname] = useState("");
 	const [lname, setLname] = useState("");
@@ -15,7 +15,7 @@ const Signup = () => {
 	const [remember, setRemember] = useState(false);
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
-	const user = useUser("Signup");
+	const userId = useAuth().id;
 	const onFnameChange = (e) => {
 		setFname(e.target.value);
 	};
@@ -42,10 +42,10 @@ const Signup = () => {
 		);
 	};
 	useEffect(() => {
-		if (user.email) {
+		if (userId) {
 			navigate("/cart");
 		}
-	}, [user, navigate]);
+	}, [userId, navigate]);
 	return (
 		<div className="flex px-6 sm:items-center justify-center min-h-[80vh] ring">
 			<form

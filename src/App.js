@@ -41,7 +41,7 @@ function App() {
 	useEffect(() => {
 		dispatch(fetchAllProductsAsync());
 	}, []);
-	const userId = useAuth();
+	const userId = useAuth().id;
 
 	useEffect(() => {
 		if (userId) {

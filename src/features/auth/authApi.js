@@ -12,7 +12,13 @@ export function createUser(user) {
 
 export function checkUser(user) {
 	return new Promise(async (resolve, reject) => {
-		const response = await fetch(`http://localhost:4000/login`);
+		console.log("CheckUser,", user);
+		const response = await fetch(`http://localhost:4000/users/login`, {
+			method: "POST",
+			body: JSON.stringify(user),
+
+			headers: {"content-type": "application/json"},
+		});
 		const data = await response.json();
 		resolve({data});
 	});

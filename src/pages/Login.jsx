@@ -10,7 +10,7 @@ const Login = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [remember, setRemember] = useState(false);
-	const {user: userId, error} = useSelector(selectAuth);
+	const {accessToken, error} = useSelector(selectAuth);
 	const location = useLocation();
 	const dispatch = useDispatch();
 	const onEmailChange = (e) => {
@@ -33,8 +33,9 @@ const Login = () => {
 	}
 	const navigate = useNavigate();
 	useLayoutEffect(() => {
-		if (userId) navigate(location?.state?.from || "/user");
-	}, [userId]);
+		if (accessToken) navigate(location?.state?.from || "/user");
+		console.log(accessToken);
+	}, [accessToken]);
 	return (
 		<div className="flex px-6 sm:items-center justify-center min-h-[80vh] ring">
 			<form

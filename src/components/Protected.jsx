@@ -4,7 +4,7 @@ import useAuth from "../hooks/useAuth";
 
 const Protected = ({children}) => {
 	const location = useLocation();
-	const userId = useAuth();
+	const userId = useAuth().id;
 	return userId ? (
 		children
 	) : (

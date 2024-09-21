@@ -15,7 +15,7 @@ import {useNavigate} from "react-router-dom";
 const CartItem1 = ({productId, quantity}) => {
 	const product = useSelector((state) => getProductById(state, productId));
 	const dispatch = useDispatch();
-	const userId = useAuth();
+	const userId = useAuth().id;
 	const navigate = useNavigate();
 	const item = {product: product?.id, user: userId};
 	if (!product || !userId) {
